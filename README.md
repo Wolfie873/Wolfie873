@@ -1,0 +1,26 @@
+### Hi there 👋
+
+<!--
+**Wolfie873/Wolfie873** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+
+Here are some ideas to get you started:
+
+- 🔭 I’m currently working on ...
+- 🌱 I’m currently learning ...
+- 👯 I’m looking to collaborate on ...
+- 🤔 I’m looking for help with ...
+- 💬 Ask me about ...
+- 📫 How to reach me: ...
+- 😄 Pronouns: ...
+- ⚡ Fun fact: ...
+-->This readme is my first attempt at understanding how to use Github and learn coding in general. As of right now I am learning Javascript and have an amateur understanding of HTML and CSS.
+If anyone reads this and wants to help on my learning journey by:
+<ul>
+  <li>Learning together</li>
+  <li>Collaborating on ideas</li>
+  <li>Mentor me</li>
+</ul>
+I will be glad for the help. As it stands now I need all the help I can get.Right now I am working on a simple HTML code writer for work and on my free time beefing up my webpage.
+On a journey to learn some game design coding, but isn't everyone these days. I just want to share my ideas and do what I love.
+</br>
+My best contact email is jorge.ortiz20@hotmail.com
