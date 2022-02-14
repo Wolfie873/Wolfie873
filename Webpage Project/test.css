@@ -1,120 +1,120 @@
 header {
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
-body{
-    background-color: #F4F4EF;
-    display: block;
-    font-family:serif;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    color: #20232A;
+body {
+  background-color: #f4f4ef;
+  display: block;
+  font-family: serif;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  color: #20232a;
 }
-.topbar{
-    display: flex;
-    background-color: #A01D26;
-    list-style-type:none;
-    font-size: 20px;
-    text-align:center;
+.topbar {
+  display: flex;
+  background-color: #a01d26;
+  list-style-type: none;
+  font-size: 20px;
+  text-align: center;
 }
-.topbar li{
-    display:inline-block;
-    color:#F4F4EF;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    margin-left: 100px;
-    margin-right: 100px;
-    padding-top:5px;
-    padding-bottom:5px;
-    padding-right:10px;
-    padding-left:10px;
-    background-color: #20232A;
-    border-radius: 8px;
+.topbar li {
+  display: inline-block;
+  color: #f4f4ef;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: #20232a;
+  border-radius: 8px;
 }
-.main_list{
-    display: inline-block;
-    list-style-image: none;
-    list-style-type: none;
+.main_list {
+  display: inline-block;
+  list-style-image: none;
+  list-style-type: none;
 }
-.main_list li{
-    text-align: justify;
+.main_list li {
+  text-align: justify;
 }
-#main_list{
-    padding-left: 50%;
-    padding-right: 50%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+#main_list {
+  padding-left: 50%;
+  padding-right: 50%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-#lang_list{
-    padding-top: 10px;
-    padding-bottom: 10px;
+#lang_list {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-.intro{
-    display: inline-block;
-    text-align: center;
-    margin-left: 50px;
-    margin-right: 50px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.intro {
+  display: inline-block;
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-.imgs{
-    display: flex;
-    max-width: 54px;
-    max-height: 54px;
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
+.imgs {
+  display: flex;
+  max-width: 54px;
+  max-height: 54px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
 }
-#hideimage{
-    width: 100%;
-    height: 100%;
+#hideimage {
+  width: 100%;
+  height: 100%;
 }
-footer{
-    display: flex;
-    background-color: #A01D26;
-    color: #F4F4EF;
-    font-size: 10px;
-    text-align: justify;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 48%;
-    padding-right: 0;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
+footer {
+  display: flex;
+  background-color: #a01d26;
+  color: #f4f4ef;
+  font-size: 10px;
+  text-align: justify;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 48%;
+  padding-right: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
-p{
-    text-align: justify;
+p {
+  text-align: justify;
 }
-.buttns{
-    display: flex;
-    max-width: 80px;
-    margin-left: 50%;
-    margin-right: 50%;
-    margin-bottom: 5px;
+.buttns {
+  display: flex;
+  max-width: 80px;
+  margin-left: 50%;
+  margin-right: 50%;
+  margin-bottom: 5px;
 }
-.buttns button{
-    background-color: #20232A;
-    font-size: 8px;
-    color: #F4F4EF;
-    margin-left: 2px;
-    margin-right: 2px;
+.buttns button {
+  background-color: #20232a;
+  font-size: 8px;
+  color: #f4f4ef;
+  margin-left: 2px;
+  margin-right: 2px;
 }
-html{
-    max-width: 1920px;
-    max-height: 1080px;
+html {
+  max-width: 1920px;
+  max-height: 1080px;
 }
