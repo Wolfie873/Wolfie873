@@ -62,7 +62,8 @@ body {
   padding-bottom: 10px;
 }
 .intro {
-  display: inline-block;
+  display: inline;
+  width: 800px;
   text-align: center;
   margin-left: 50px;
   margin-right: 50px;
@@ -83,7 +84,6 @@ body {
   height: 100%;
 }
 footer {
-  display: flex;
   background-color: #a01d26;
   color: #f4f4ef;
   font-size: 10px;
@@ -113,4 +113,17 @@ p {
   color: #f4f4ef;
   margin-left: 2px;
   margin-right: 2px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.sidebar {
+  display: block;
+  height: 100%;
+  width: 100%;
+  color: white;
+  background-color: #20232a;
+  padding-top: 10px;
+  padding-right: 10px;
 }
