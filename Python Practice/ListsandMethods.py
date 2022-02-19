@@ -1,3 +1,7 @@
+from pickle import TRUE
+from turtle import clear
+import copy #Imports the copy function
+
 animals = ['cow', 'horse', 'pig', 'cat', 'dog'] #This is a list of strings
 print(animals.index('pig')) #Prints the index number where the string is located
 animals.append('hyena') #Appends a value at the end of a list
@@ -31,3 +35,45 @@ lowerfirst = ['Area', 'area', 'Beach', 'beach', 'raviolli', 'Pizza']
 lowerfirst.sort(key=str.lower) #This method sorts by true alphabetical order by conventing all strings into lowecase first
 for i in range(len(lowerfirst)):
     print(lowerfirst[i])
+
+print(list('Hello')) #Makes a list of each letter for the string
+
+name = 'Jorge Ortiz' #Most functions you can use on lists, you can also use on strings
+print(name[0])
+print(name[1:3])
+print(name[-3])
+for letter in name:
+    print(letter)
+newName = name[:6] + 'the ' + name[6:] #With slicing you can manipulate text, as it is an immutable object
+print(newName)
+
+mutableList = [1, 2, 3, 4, 5, 6]
+changedList = mutableList #This creates a reference to the list above
+print(changedList)
+changedList[1] = 'Hello'
+print(changedList)
+print(mutableList)
+#Lists are mutable objects and as such can be changed with the reference. They are the same lost
+
+def eggs(someParameter):
+    someParameter.append('Eggs n\' Bakey')
+eggnum = [1, 2, 3]
+eggs(eggnum)
+print(eggnum)
+
+spam = [1, 2, 3, 4, 5]
+cheese = copy.deepcopy(spam) #Creates a copy of the list that does not modify original list
+print(cheese)
+pokes = ['charmander', 'squirtle', 'bulbasaur']
+cheese.append(pokes[1])
+print(spam)
+print(str(cheese))
+ #Python does not care for indentations as long as these methods are used
+speech = 'Four score and ' + \
+    'seven years ago, the forefathers of this nation' + \
+        ' I am so fucking high right now.'
+print(speech)
+alsoSpeech = ['Maybe', 
+              'Yes', 
+              'Perhaps']
+print(alsoSpeech)
