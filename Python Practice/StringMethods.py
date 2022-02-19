@@ -1,3 +1,5 @@
+#! python3
+#Above is the Shebang Line which tells Windows which version of python to run. Should be at the top of all python files.
 import pyperclip
 
 text = 'Hello World!'

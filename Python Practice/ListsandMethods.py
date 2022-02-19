@@ -1,3 +1,4 @@
+#! python3
 from pickle import TRUE
 from turtle import clear
 import copy #Imports the copy function

@@ -2,6 +2,7 @@ from socket import if_nameindex
 from tkinter import TRUE
 
 
+#! python3
 dog = {'name': 'Chewie', 'age': 3, 'color': 'brown'}
 allDogs = []
 allDogs.append({'name': 'Chewie', 'age': 3, 'color': 'brown'})

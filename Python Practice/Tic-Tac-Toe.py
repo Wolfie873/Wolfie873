@@ -1,3 +1,4 @@
+#! python3
 import pprint
 
 theBoard = {'top-L': ' ', 'top-R': ' ', 'top-M': ' ', 'middle-L': ' ', 'middle-R': ' ', 'middle': ' ',
