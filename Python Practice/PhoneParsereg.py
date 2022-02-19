@@ -8,4 +8,4 @@ teststring = 'This is a text string with two phone numbers and two other things 
 
 phoneNumRegEx = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
 mo = phoneNumRegEx.findall(teststring)
-print(str(mo))
+print(mo)
