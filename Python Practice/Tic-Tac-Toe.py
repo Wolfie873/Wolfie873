@@ -13,7 +13,4 @@ def printBoard(board):
 printBoard(theBoard)
 
 print('Your move: ')
-user = input()
-
-
-    
+user = input()  
