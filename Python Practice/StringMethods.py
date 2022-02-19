@@ -20,3 +20,16 @@ moreR = more.rjust(10)
 print(moreR.strip()) #Strips white space
 repeat = 'Many Many Many More People Many Dude Many'.replace('a', 'o') #Replaces all A with O in the string
 print(repeat)
+pyperclip.copy(text)
+print(pyperclip.paste())
+
+#String formatting is very useful and important
+name = 'Jorge'
+age = '27'
+weakness = 'Pizza Pie'
+strength = 'Apple Computer Software'
+birtday = '10/12/20'
+
+print('Hello %s I know you are %s and there are many things you want '\
+    'to know about your weakness %s and I know your one true '\
+        'strength %s you were born on %s.' % (name, age, weakness, strength, birtday))
