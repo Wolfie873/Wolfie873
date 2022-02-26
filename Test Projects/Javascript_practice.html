@@ -10,9 +10,12 @@
 
     <button id="btn">Change Text</button>
 
-    <p id="appnd">Javascript is...</p>
+    <p id="appnd"></p>
 
-    <button id="appndbtn">Change Text</button>
+    <button id="appndbtn">Append Text</button>
+
+    <p id="moreText">This is some text that transforms</p>
+    <button id="styleText">Style text</button>
 
     <script type="text/javascript">
       document.getElementById("btn").onclick = function () {
@@ -24,7 +27,10 @@
 
       document.getElementById("appndbtn").onclick = function () {
         document.getElementById("appnd").innerHTML =
-          "I think " + document.getElementById("appnd").innerHTML + " awesome.";
+          "There should be alot of text here once you press the button";
+      };
+      document.getElementById("styleText").onclick = function () {
+        document.getElementById("moreText").style.display = "none";
       };
     </script>
   </body>
