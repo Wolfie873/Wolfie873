@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Testing</title>
+    <style type="text/css"></style>
+  </head>
+  <body>
+    <p>How many fingers am I holding up?</p>
+
+    <p>
+      <input type="number" id="numberGuessed" placeholder="num" />
+    </p>
+
+    <p><button id="submit">Guess</button></p>
+
+    <p id="answer"></p>
+    <script type="text/javascript">
+      document.getElementById("submit").onclick = function () {
+        var guessed = document.getElementById("numberGuessed").value;
+        function randomGenerator(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        var randNumber = randomGenerator(0, 10);
+
+        console.log(randNumber);
+
+        if (guessed == randNumber) {
+          document.getElementById("answer").innerHTML =
+            "Your answer is correct!";
+        } else {
+          document.getElementById("answer").innerHTML =
+            "Nope the number was: " + randNumber;
+        }
+      };
+    </script>
+  </body>
+
+  <footer></footer>
+</html>

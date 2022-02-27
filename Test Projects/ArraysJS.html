@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Testing</title>
+    <style type="text/css">
+      button {
+        width: "100px";
+        height: "50px";
+      }
+    </style>
+  </head>
+  <body>
+    <p id="textChange">What ingridient do you want to add to the pizza?</p>
+
+    <input type="text" id="ingridient" placeholder="ingridient" />
+
+    <button id="sub" type="button" aria-label="submit" onclick="changeText()">
+      Submit
+    </button>
+
+    <script type="text/javascript">
+      function changeText() {
+        var myArray = new Array();
+        var myText = document.getElementById("ingridient").value;
+        var i = 0;
+
+        myArray[0] = "pizza";
+        myArray[1] = "cheese";
+        myArray[2] = "pepperoni";
+        myArray[3] = "sauce";
+        myArray[4] = myText;
+
+        console.log(myArray);
+
+        secondArray = ["values", "text", "array", "learning"];
+
+        secondArray.push(myArray[2]);
+
+        secondArray.splice(1, 1, "testing");
+
+        console.log(secondArray);
+      }
+    </script>
+  </body>
+  <footer></footer>
+</html>
