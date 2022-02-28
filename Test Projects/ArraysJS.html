@@ -20,11 +20,13 @@
       Submit
     </button>
 
+    <div id="addText"></div>
+
     <script type="text/javascript">
       function changeText() {
         var myArray = new Array();
         var myText = document.getElementById("ingridient").value;
-        var i = 0;
+        var newText = ["", "", "", "", ""];
 
         myArray[0] = "pizza";
         myArray[1] = "cheese";
@@ -41,6 +43,29 @@
         secondArray.splice(1, 1, "testing");
 
         console.log(secondArray);
+
+        for (var i = 0; i < myArray.length; i++) {
+          newText[i] = newText[i] + "<p>" + myArray[i] + "</p>";
+        }
+
+        document.getElementById("addText").innerHTML =
+          "<ol>Your ingridients are: " +
+          "<li>" +
+          newText[0] +
+          "</li>" +
+          "<li>" +
+          newText[1] +
+          "</li>" +
+          "<li>" +
+          newText[2] +
+          "</li>" +
+          "<li>" +
+          newText[3] +
+          "</li>" +
+          "<li>" +
+          newText[4] +
+          "</li>" +
+          "</ol>";
       }
     </script>
   </body>

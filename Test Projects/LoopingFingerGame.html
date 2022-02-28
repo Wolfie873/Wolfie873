@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Testing</title>
+    <style type="text/css">
+      button {
+        width: "100px";
+        height: "50px";
+      }
+    </style>
+  </head>
+  <body>
+    <p>How many fingers am I holding up?</p>
+
+    <p><input type="text" id="guess" placeholder="guess" /></p>
+
+    <p><button id="guessButton" type="button">Guess?</button></p>
+
+    <div id="answerBox">
+      <p>You answer was:</p>
+      <p id="yourAnswer"></p>
+      <p>The answer was:</p>
+      <p id="winAnswer"></p>
+    </div>
+
+    <script type="text/javascript">
+      document.getElementById("guessButton").onclick = function () {
+        var userAnswer = document.getElementById("guess").value;
+
+        var test = false;
+
+        var numberGuessed = 1;
+
+        while (test == false) {
+          function randomGenerator(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+          }
+          var gameAnswer = randomGenerator(0, 10);
+          if (userAnswer == gameAnswer) {
+            alert(
+              "Correct, the answer is: " +
+                userAnswer +
+                ". It took you: " +
+                numberGuessed +
+                " guesses."
+            );
+            test = true;
+          } else {
+            numberGuessed++;
+          }
+        }
+      };
+    </script>
+  </body>
+  <footer></footer>
+</html>
