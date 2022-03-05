@@ -1,0 +1,60 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade-in {
+  background-color: black;
+  transition: opacity 0.5s linear;
+  text-align: center;
+}
+.fade-in:hover {
+  opacity: 0;
+}
+#introText {
+  color: white;
+}
+body {
+  background-color: black;
+}
+#introArea {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../PositiveGame/Cityscape.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50%;
+  height: 550px;
+}
+#startPage {
+  color: white;
+  background-color: black;
+  border: white solid 1px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+a {
+  text-decoration: none;
+  color: blue;
+}
+a:click {
+  color: blue;
+}
+#charCreator {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  width: 50%;
+  height: 550px;
+  color: black;
+}
