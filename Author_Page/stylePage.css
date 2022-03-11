@@ -26,7 +26,7 @@ body {
   text-align: center;
   background-color: #191923;
 }
-#bio {
+.bText {
   color: #fbfef9;
 }
 .scrollingBtn {
@@ -63,4 +63,7 @@ body {
 }
 #viewer:hover {
   background-color: black;
+}
+.subTitles {
+  color: #fbfef9;
 }
