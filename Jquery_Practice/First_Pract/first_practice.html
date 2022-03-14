@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <link rel="stylesheet" href="../First_Pract/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+  </head>
+  <body>
+    <div class="square" id="redSquare"></div>
+    <div class="circle" id="blueCircle"></div>
+    <div class="circle" id="greenCircle"></div>
+    <script type="text/javascript">
+      $("#redSquare").click(function () {
+        alert("Red Square clicked");
+      });
+      $(".circle").click(function () {
+        alert("A circle has been pressed");
+      });
+      $("div").click(function () {
+        alert("You pressed something I guess!");
+      });
+
+      if (typeof jQuery == "undefined") {
+        console.log("jQuery not installed correctly");
+      } else {
+        console.log("jQuery installed, Yay!");
+      }
+    </script>
+  </body>
+
+  <footer></footer>
+</html>

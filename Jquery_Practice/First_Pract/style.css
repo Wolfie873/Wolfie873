@@ -1,0 +1,22 @@
+.square {
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin: 10px;
+}
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  float: left;
+  margin: 10px;
+}
+#redSquare {
+  background-color: red;
+}
+#blueCircle {
+  background-color: blue;
+}
+#greenCircle {
+  background-color: green;
+}
