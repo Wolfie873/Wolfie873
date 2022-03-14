@@ -30,9 +30,36 @@
     </div>
 
     <script type="text/javascript">
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF".split("");
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
       var start = new Date().getTime();
 
       function shapeAppear() {
+        var square = Math.random() * 200 + 100;
+
+        if (Math.random() > 0.5) {
+          document.getElementById("shape").style.borderRadius = "50%";
+        } else if (Math.random() > 0.25) {
+          document.getElementById("shape").style.borderRadius = "25%";
+        } else if (Math.random() > 0.1) {
+          document.getElementById("shape").style.borderRadius = "10%";
+        } else if (Math.random() > 0.75) {
+          document.getElementById("shape").style.borderRadius = "75%";
+        } else {
+          document.getElementById("shape").style.borderRadius = "0%";
+        }
+
+        document.getElementById("shape").style.backgroundColor =
+          getRandomColor();
+        document.getElementById("shape").style.width = square + "px";
+        document.getElementById("shape").style.height = square + "px";
         document.getElementById("shape").style.top =
           randomGenerator(5, 65) + "%";
         document.getElementById("shape").style.left =
