@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <style type="text/css">
+      .circle {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        border-radius: 50%;
+        margin: 10px;
+      }
+      .square {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        margin: 10px;
+      }
+      body {
+        background-color: black;
+        color: white;
+      }
+    </style>
+    <title>SecondjQuery</title>
+  </head>
+  <body>
+    <div class="circle"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <p>This is some text.</p>
+    <script type="text/javascript">
+      /*$("#circle").click(function () {
+        $("#circle").css("background-color", "red");
+        alert($("body").css("width"));
+      });*/
+      $("div").click(function () {
+        $(this).css("display", "none");
+        alert("You have clicked a " + $(this).attr("class"));
+      });
+    </script>
+  </body>
+  <footer></footer>
+</html>
