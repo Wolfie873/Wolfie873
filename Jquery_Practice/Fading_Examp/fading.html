@@ -27,8 +27,22 @@
   <body>
     <div id="square"></div>
     <div id="circle"></div>
+    <p id="disText">This is some text that will fade out.</p>
+    <button id="press">Press to fade out</button>
+    <button id="fadein">Press to make appear</button>
     <script type="text/javascript">
-      $("div").click(function () {});
+      $("#press").click(function () {
+        if ($("#disText").css("display") == "none") {
+          $("#disText").fadeIn();
+        } else {
+          $("#disText").fadeOut();
+        }
+      });
+      $("div").click(function () {
+        $(this).fadeOut("slow", function () {
+          alert("Element has been removed.");
+        });
+      });
     </script>
   </body>
   <footer></footer>
