@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <title>FormjQuery</title>
+    <style type="text/css">
+      body {
+        font-family: helvetica, sans-serif;
+        font-size: 110%;
+      }
+      input {
+        margin-left: 10px;
+        height: 24px;
+        padding: 5px;
+        font-size: 24px;
+        border-radius: 5px;
+        border: 1px solid grey;
+      }
+      label {
+        float: left;
+        position: relative;
+        top: 4px;
+        width: 100px;
+      }
+      #container {
+        margin: 0 auto;
+        width: 500px;
+      }
+      .form-element {
+        margin: 10px auto;
+      }
+      #submit {
+        margin: 40px;
+        height: 24px;
+        padding: 5px;
+        font-size: 12px;
+        font-style: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="form-element">
+        <label for="email">E-Mail</label>
+        <input type="text" name="email" id="email" placeholder="eg@email.com" />
+        <br />
+      </div>
+      <div class="form-element">
+        <label for="phone">Phone</label>
+        <input type="text" name="phone" id="phone" placeholder="123-456-7890" />
+        <br />
+      </div>
+      <div class="form-element">
+        <label for="password">Password</label>
+        <input
+          type="text"
+          name="password"
+          id="password"
+          placeholder="p@ssw0rd"
+        />
+      </div>
+      <div class="form-element">
+        <label for="passwordConf">Confirm Password</label>
+        <input
+          type="text"
+          name="passwordConf"
+          id="passwordConf"
+          placeholder="p@ssw0rd"
+        />
+      </div>
+      <div class="form-element">
+        <input type="submit" name="submit" id="submit" value="Sign Up" />
+      </div>
+    </div>
+    <script type="text/javascript">
+      function isEmail(email) {
+        let regexEmail =
+          /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regexEmail.test(email);
+      }
+      function isPhone(phone) {
+        let regexPhone =
+          /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+        return regexPhone.test(phone);
+      }
+      function isPassword(password) {
+        let regexPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
+        return regexPassword.test(password);
+      }
+      $("#submit").click(function () {
+        var errorMessage = "";
+        if (isEmail($("#email").val()) == false) {
+          errorMessage += "Email address not valid\n";
+        }
+        if (isPhone($("#phone").val()) == false) {
+          errorMessage += "Phone number not valid\n";
+        }
+        if ($("#password").val() != $("#passwordConf").val()) {
+          errorMessage += " Passwords do not match\n";
+        }
+        if (isPassword($("#password").val()) == false) {
+          errorMessage +=
+            "Must be longer than 8 characters and must contain at least one UPPER CASE letter, lower case letter, and number.";
+        }
+
+        alert(errorMessage);
+      });
+    </script>
+  </body>
+  <footer></footer>
+</html>
