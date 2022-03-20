@@ -41,6 +41,18 @@
         font-size: 12px;
         font-style: bold;
       }
+      #errorMessage {
+        font-size: 12px !important;
+        font-style: italic;
+        font-weight: bold;
+        color: red;
+      }
+      #successMessage {
+        font-size: 12px !important;
+        font-weight: bold;
+        color: green;
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -77,6 +89,10 @@
         <input type="submit" name="submit" id="submit" value="Sign Up" />
       </div>
     </div>
+    <div id="errorMessage"></div>
+    <div id="successMessage">
+      <p>All fields filled correctly! Prepare to be erased...</p>
+    </div>
     <script type="text/javascript">
       function isEmail(email) {
         let regexEmail =
@@ -94,21 +110,38 @@
       }
       $("#submit").click(function () {
         var errorMessage = "";
+        var missingInfo = "";
+
+        if ($("#email").val() == "") {
+          missingInfo += "<p>Email is missing</p>";
+        }
+        if ($("#phone").val() == "") {
+          missingInfo += "<p>Phone number is missing</p>";
+        }
+        if ($("#password").val() == "") {
+          missingInfo += "<p>Password is missing</p>";
+        }
+        if ($("#passwordConf").val() == "") {
+          missingInfo += "<p>Password confirmation is missing</p>";
+        }
+        if (missingInfo != "") {
+          errorMessage += missingInfo;
+        }
         if (isEmail($("#email").val()) == false) {
-          errorMessage += "Email address not valid\n";
+          errorMessage += "<p>Email address not valid</p>";
         }
         if (isPhone($("#phone").val()) == false) {
-          errorMessage += "Phone number not valid\n";
+          errorMessage += "<p>Phone number is not valid</p>";
         }
         if ($("#password").val() != $("#passwordConf").val()) {
-          errorMessage += " Passwords do not match\n";
+          errorMessage += "<p>Passwords do not match</p>";
         }
-        if (isPassword($("#password").val()) == false) {
-          errorMessage +=
-            "Must be longer than 8 characters and must contain at least one UPPER CASE letter, lower case letter, and number.";
+        if (errorMessage != "") {
+          $("#errorMessage").html(errorMessage);
+        } else {
+          $("#successMessage").css("display", "block");
+          $("#errorMessage").css("display", "none");
         }
-
-        alert(errorMessage);
       });
     </script>
   </body>
