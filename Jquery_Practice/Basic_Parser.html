@@ -15,7 +15,8 @@
       }
       input {
         margin-left: 10px;
-        height: 24px;
+        height: 500px;
+        width: 400px;
         padding: 5px;
         font-size: 24px;
         border-radius: 5px;
@@ -34,13 +35,18 @@
       .form-element {
         margin: 10px auto;
       }
+      #submit {
+        height: 48px;
+        width: 96px;
+        font-size: 24px;
+      }
     </style>
   </head>
   <body>
     <div id="container">
       <div class="form-element">
         <label for="fullText">Enter Text Here:</label>
-        <input type="textarea" name="fullText" id="fullText" placeholder="" />
+        <textarea name="fullText" id="fullText" placeholder=""></textarea>
         <br />
       </div>
       <div class="form-element">
@@ -52,8 +58,13 @@
     <script type="text/javascript">
       function isEmail(email) {
         let regexEmail =
-          /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+          /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/gm;
         return regexEmail.exec(email);
+      }
+      function isEmailTrue(email2) {
+        let regexEmail2 =
+          /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/gm;
+        return regexEmail2.test(email2);
       }
       function isPhone(phone) {
         let regexPhone =
@@ -61,7 +72,7 @@
         return regexPhone.exec(phone);
       }
       function isName(name) {
-        let regexName = /^[A-Z]?[a-z]{2,10}[\s]^[A-Z]?[a-z]{2,10}/g;
+        let regexName = /^[a-z,.'-]+[\s]+^[a-z,.'-][\s]$/gi;
         return regexName.exec(name);
       }
       $("#submit").click(function () {
@@ -69,12 +80,26 @@
           var nameText = "";
           var emailText = "";
           var phoneText = "";
-          var together = "";
+          var together = [];
           var parse = $("#fullText").val();
 
-          alert(isName(parse));
-          alert(isEmail(parse));
-          alert(isPhone(parse));
+          alert(parse.length);
+
+          if (parse != "null") {
+            if (isEmailTrue(parse) != false) {
+              for (var i = 0; i < parse.length; i++) {
+                together[i] += isEmail(parse);
+                alert(together[i]);
+                break;
+              }
+            } else {
+              alert("No email found");
+            }
+          } else {
+            alert(parse);
+          }
+          //alert(isEmail(parse));
+          //alert(isPhone(parse));
 
           together = nameText + " " + emailText + " " + phoneText;
           $("#parsedText").html(together);
