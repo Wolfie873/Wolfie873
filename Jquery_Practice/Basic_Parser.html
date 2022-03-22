@@ -73,32 +73,24 @@
         return regexPhone.exec(phone);
       }
       function isName(name) {
-        let regexName = /^[A-Z,.'-]+[a-z]{2,}/g;
+        let regexName = /^[A-Z,.'-]+[a-z]{2,}/gm;
         return regexName.exec(name);
+      }
+      function isNotName(notName) {
+        let regexNotName = /^[A-Z,.'-]+[a-z]{2,}/gm;
+        return regexNotName.test(notName);
       }
       $("#submit").click(function () {
         $("#parsedText").html(function () {
           var together = [""];
-          var parse = $("#fullText").val().toString();
-          for (var i = 0; i < parse.length; i++) {
-            saveName[i] = isName(parse);
-          }
-          //for (var i = 0; i < saveName[i].length; i++) {
-          alert(parse.length);
-          alert(parse);
-          //}
+          var parse = $("#fullText").val();
+          saveName.push(isName(parse));
 
-          /*if (parse != "null") {
-            if (isEmailTrue(parse) != false) {
-              alert(isEmail(parse));
-            } else {
-              alert("No email found");
-            }
-          } else {
-            alert(parse);
+          alert(isNotName(parse));
+          for (var i = 0; i < 3; i++) {
+            console.log(parse.typeof());
+            //alert(saveName[i]);
           }
-          //alert(isEmail(parse));
-          //alert(isPhone(parse));*/
         });
       });
     </script>
