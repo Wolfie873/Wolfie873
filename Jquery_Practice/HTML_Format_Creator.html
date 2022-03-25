@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <style type="text/css"></style>
+    <title>SecondjQuery</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="input_info">
+        <div id="header_choice">
+          <label for="header_style">Select title style: </label>
+          <select id="header_style" name="header_style">
+            <option value="head_1">Biggest</option>
+            <option value="head_2">Bigger</option>
+            <option value="head_3">Big</option>
+            <option value="head_4">Standard</option>
+            <option value="head_5">Small</option>
+            <option value="head_6">Smaller</option>
+          </select>
+          <label for="title_in">Write your title: </label>
+          <input type="text" id="title_in" placeholder="Title text here..." />
+          <button id="add_header" type="submit">Add Header</button>
+        </div>
+        <div id="set_para">
+          <label for="para_num">Paragraphs: </label>
+          <textarea
+            name="para_num"
+            id="para_num"
+            rows="15"
+            cols="30"
+            placeholder="Enter text here..."
+          ></textarea>
+          <button id="add_button" type="submit">Add Paragraph</button>
+        </div>
+        <div id="set_footer">
+          <label for="footer_text">Set your footer: </label>
+          <input type="text" name="footer_text" id="footer_text" />
+        </div>
+      </div>
+      <div id="full_format"></div>
+    </div>
+    <script type="text/javascript">
+      $("#add_header").click(function () {
+        var headerStyle = $("#header_style").val();
+        var titlesVal = $("#title_in").val();
+        var fullFormat = "";
+        switch (headerStyle) {
+          case "head_1":
+            break;
+        }
+        console.log(titlesVal);
+        alert(titlesVal);
+      });
+    </script>
+  </body>
+  <footer></footer>
+</html>
