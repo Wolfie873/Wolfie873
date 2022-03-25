@@ -44,6 +44,7 @@
         </div>
       </div>
       <div id="full_format"></div>
+      <div id="html_format"></div>
     </div>
     <script type="text/javascript">
       $("#add_header").click(function () {
@@ -52,10 +53,12 @@
         var fullFormat = "";
         switch (headerStyle) {
           case "head_1":
+            fullFormat += "<h1>" + titlesVal + "</h1>";
             break;
         }
-        console.log(titlesVal);
-        alert(titlesVal);
+        $("#full_format").html(fullFormat);
+        $("#html_format").text(fullFormat);
+        console.log(fullFormat);
       });
     </script>
   </body>
