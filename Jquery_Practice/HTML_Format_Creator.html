@@ -33,7 +33,11 @@
         font-size: 11.2px;
       }
       .set_para {
-        float: left;
+        position: relative;
+      }
+      .new_para {
+        display: none;
+        position: relative;
       }
     </style>
     <title>SecondjQuery</title>
@@ -56,7 +60,7 @@
           <button id="add_header" type="submit">Add Header</button>
         </div>
         <div class="set_para">
-          <label for="para_num">Paragraphs: </label>
+          <label for="para_num">Paragraph-1: </label>
           <textarea
             name="para_num"
             id="para_num"
@@ -64,11 +68,39 @@
             cols="30"
             placeholder="Enter text here..."
           ></textarea>
-          <label for="how_many_para"
-            >How many paragraphs do you want to add:
-          </label>
-          <input type="text" id="how_many_para" />
           <button id="add_button" type="submit">Add Paragraph</button>
+        </div>
+        <div class="new_para" id="para2">
+          <label for="para_num2">Paragraph-2: </label>
+          <textarea
+            name="para_num2"
+            id="para_num2"
+            rows="15"
+            cols="30"
+            placeholder="Enter text here..."
+          ></textarea>
+          <button id="add_button2" type="submit">Add Paragraph</button>
+        </div>
+        <div class="new_para" id="para3">
+          <label for="para_num3">Paragraph-3: </label>
+          <textarea
+            name="para_num3"
+            id="para_num3"
+            rows="15"
+            cols="30"
+            placeholder="Enter text here..."
+          ></textarea>
+          <button id="add_button3" type="submit">Add Paragraph</button>
+        </div>
+        <div class="new_para" id="para4">
+          <label for="para_num4">Paragraph-4: </label>
+          <textarea
+            name="para_num4"
+            id="para_num4"
+            rows="15"
+            cols="30"
+            placeholder="Enter text here..."
+          ></textarea>
         </div>
         <div id="set_footer">
           <label for="footer_text">Set your footer: </label>
@@ -119,7 +151,7 @@
       $("#add_button").click(function () {
         var newPara =
           '<div class="set_para"> <label for="para_num2">Paragraphs: </label> <textarea name="para_num2" id="para_num2" rows="15" cols="30" placeholder="Enter text here..."></textarea></div>';
-        $(".set_para").appendChild(newPara);
+        $(".set_para").append(newPara);
       });
     </script>
   </body>
