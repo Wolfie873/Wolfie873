@@ -76,7 +76,6 @@
         </div>
       </div>
       <div id="full_format"></div>
-      <div id="html_format"></div>
     </div>
     <script type="text/javascript">
       $("#add_header").click(function () {
@@ -94,7 +93,6 @@
         fullFormat = sectionTags[0] + titleTags[0];
         switch (headerStyle) {
           case "head_1":
-            fullFormat += "<h1>" + titlesVal + "</h1>";
             break;
           case "head_2":
             fullFormat += "<h2>" + titlesVal + "</h2>";
@@ -112,9 +110,8 @@
             fullFormat += "<h6>" + titlesVal + "</h6>";
             break;
         }
-        $("#full_format").html(fullFormat);
-        $("#html_format").text(fullFormat);
-        console.log(fullFormat);
+        console.log(titlesVal);
+        alert(titlesVal);
       });
       $("#add_button").click(function () {
         var numberPara = $("#how_many_para").val();
