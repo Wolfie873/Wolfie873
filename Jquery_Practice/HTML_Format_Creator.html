@@ -117,9 +117,30 @@
         console.log(fullFormat);
       });
       $("#add_button").click(function () {
-        var newPara =
-          '<div class="set_para"> <label for="para_num2">Paragraphs: </label> <textarea name="para_num2" id="para_num2" rows="15" cols="30" placeholder="Enter text here..."></textarea></div>';
-        $(".set_para").appendChild(newPara);
+        var numberPara = $("#how_many_para").val();
+        for (var i = 0; i < numberPara; i++) {
+          let j = 0;
+          var appnd =
+            '<div class="set_para">' +
+            '<label for="para_num' +
+            j.toString() +
+            '">' +
+            "Whatever" +
+            j.toString() +
+            "</label>" +
+            '<textarea name="para_num' +
+            j.toString() +
+            '"' +
+            'id="para_num' +
+            j.toString() +
+            '"' +
+            'rows="15" cols="30" placeholder="Enter text here...">' +
+            "</textarea>" +
+            "</div>";
+          $(".set_para").append(appnd);
+          console.log(i);
+          j++;
+        }
       });
     </script>
   </body>
