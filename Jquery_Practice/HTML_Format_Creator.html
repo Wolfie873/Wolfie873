@@ -149,9 +149,8 @@
         console.log(fullFormat);
       });
       $("#add_button").click(function () {
-        var newPara =
-          '<div class="set_para"> <label for="para_num2">Paragraphs: </label> <textarea name="para_num2" id="para_num2" rows="15" cols="30" placeholder="Enter text here..."></textarea></div>';
-        $(".set_para").append(newPara);
+        $("#para2").css("display", "block");
+        $("#add_button").css("display", "none");
       });
     </script>
   </body>
