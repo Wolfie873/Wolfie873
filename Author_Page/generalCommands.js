@@ -10,7 +10,7 @@ function scrollToTop() {
   });
 }
 function scrolling() {
-  document.getElementById("div_top").scrollIntoView();
+  document.getElementById("div_top").scrollIntoView({ behavior: "smooth" });
 }
 function viewer() {
   if (document.getElementById("documentViewer").style.display == "none") {
