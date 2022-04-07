@@ -17,10 +17,11 @@
       #draggable {
         width: 150px;
         height: 150px;
-        padding: 0.5em;
         background-color: red;
-        border: 5px solid black;
+        border: 1px solid black;
         color: white;
+        padding: 0px;
+        margin: 0px;
       }
       #container {
         width: 500px;
@@ -32,7 +33,7 @@
       $(function () {
         $("#draggable").draggable({
           containment: "parent",
-          scroll: false
+          scroll: false,
         });
       });
     </script>
