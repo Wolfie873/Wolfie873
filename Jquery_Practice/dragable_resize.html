@@ -16,25 +16,32 @@
     <style>
       #draggable {
         width: 150px;
-        height: 50%;
+        height: 150px;
         padding: 0.5em;
         background-color: red;
         border: 5px solid black;
         color: white;
-        margin-top: auto;
-        margin-bottom: auto;
+      }
+      #container {
+        width: 500px;
+        height: 500px;
+        border: 5px solid black;
       }
     </style>
-  </head>
-  <body>
-    <div id="draggable" class="ui-widget-content">
-      <p>Drag me around</p>
-    </div>
     <script>
       $(function () {
-        $("#draggable").draggable();
+        $("#draggable").draggable({
+          containment: "parent",
+          scroll: false
+        });
       });
     </script>
+  </head>
+  <body>
+    <div id="container">
+        <p id="draggable">Drag me around</p>
+      </div>
+    </div>
   </body>
   <footer></footer>
 </html>
