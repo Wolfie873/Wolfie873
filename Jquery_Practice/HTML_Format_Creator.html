@@ -146,28 +146,52 @@
         var meta1 =
           '<meta name="viewport" content="\width=device-width, initial-scale=1.0" />';
         var meta2 = '<meta charset="utf-8" />';
+        var userInput = [
+          $("#para_num").val(),
+          $("#para_num2").val(),
+          $("#para_num3").val(),
+          $("#para_num4").val(),
+        ];
 
         fullFormat = sectionTags[0] + titleTags[0];
         switch (headerStyle) {
           case "head_1":
-            fullFormat += "<h1>" + titlesVal + "</h1>";
+            fullFormat += "<h1>" + titlesVal + "</h1>\n";
             break;
           case "head_2":
-            fullFormat += "<h2>" + titlesVal + "</h2>";
+            fullFormat += "<h2>" + titlesVal + "</h2>\n";
             break;
           case "head_3":
-            fullFormat += "<h3>" + titlesVal + "</h3>";
+            fullFormat += "<h3>" + titlesVal + "</h3>\n";
             break;
           case "head_4":
-            fullFormat += "<h4>" + titlesVal + "</h4>";
+            fullFormat += "<h4>" + titlesVal + "</h4>\n";
             break;
           case "head_5":
-            fullFormat += "<h5>" + titlesVal + "</h5>";
+            fullFormat += "<h5>" + titlesVal + "</h5>\n";
             break;
           case "head_6":
-            fullFormat += "<h6>" + titlesVal + "</h6>";
+            fullFormat += "<h6>" + titlesVal + "</h6>\n";
             break;
         }
+        console.log(userInput[0]);
+        console.log(userInput[1]);
+        console.log(userInput[2]);
+        console.log(userInput[3]);
+        console.log(titlesVal);
+        if (userInput[0] != "") {
+          fullFormat += "\n" + parTags[0] + userInput[0] + parTags[1];
+        }
+        if (userInput[1] != "") {
+          fullFormat += "\n" + parTags[0] + userInput[1] + parTags[1];
+        }
+        if (userInput[2] != "") {
+          fullFormat += "\n" + parTags[0] + userInput[2] + parTags[1];
+        }
+        if (userInput[3] != "") {
+          fullFormat += "\n" + parTags[0] + userInput[3] + parTags[1];
+        }
+        $("#full_format").text(fullFormat);
       });
     </script>
   </body>
