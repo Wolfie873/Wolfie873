@@ -74,9 +74,6 @@
             >How many paragraphs do you want to add:
           </label>
           <input type="number" id="how_many_para" />
-<<<<<<< HEAD
->>>>>>> refs/remotes/origin/main
-=======
 >>>>>>> refs/remotes/origin/main
           <button id="add_button" type="submit">Add Paragraph</button>
         </div>
@@ -118,6 +115,7 @@
         </div>
       </div>
       <div id="full_format"></div>
+      <div id="html_format"></div>
     </div>
     <script type="text/javascript">
       $("#add_header").click(function () {
@@ -135,6 +133,7 @@
         fullFormat = sectionTags[0] + titleTags[0];
         switch (headerStyle) {
           case "head_1":
+            fullFormat += "<h1>" + titlesVal + "</h1>";
             break;
           case "head_2":
             fullFormat += "<h2>" + titlesVal + "</h2>";
@@ -152,39 +151,13 @@
             fullFormat += "<h6>" + titlesVal + "</h6>";
             break;
         }
-        console.log(titlesVal);
-        alert(titlesVal);
+        $("#full_format").html(fullFormat);
+        $("#html_format").text(fullFormat);
+        console.log(fullFormat);
       });
       $("#add_button").click(function () {
-<<<<<<< HEAD
         $("#para2").css("display", "block");
         $("#add_button").css("display", "none");
-=======
-        var numberPara = $("#how_many_para").val();
-        for (var i = 0; i < numberPara; i++) {
-          let j = 0;
-          var appnd =
-            '<div class="set_para">' +
-            '<label for="para_num' +
-            j.toString() +
-            '">' +
-            "Whatever" +
-            j.toString() +
-            "</label>" +
-            '<textarea name="para_num' +
-            j.toString() +
-            '"' +
-            'id="para_num' +
-            j.toString() +
-            '"' +
-            'rows="15" cols="30" placeholder="Enter text here...">' +
-            "</textarea>" +
-            "</div>";
-          $(".set_para").append(appnd);
-          console.log(i);
-          j++;
-        }
->>>>>>> refs/remotes/origin/main
       });
     </script>
   </body>

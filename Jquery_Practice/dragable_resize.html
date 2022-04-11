@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script src="../Jquery_Practice/jquery-ui-1.13.1/jquery-ui.js"></script>
+    <link
+      rel="stylesheet"
+      href="../Jquery_Practice/jquery-ui-1.13.1/jquery-ui.css"
+    />
+    <title>UIjQuery</title>
+    <style>
+      #draggable {
+        width: 150px;
+        height: 150px;
+        background-color: red;
+        border: 1px solid black;
+        color: white;
+        padding: 0px;
+        margin: 0px;
+      }
+      #container {
+        width: 500px;
+        height: 500px;
+        border: 5px solid black;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("#draggable").draggable({
+          containment: "parent",
+          scroll: false,
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="container">
+        <p id="draggable">Drag me around</p>
+      </div>
+    </div>
+  </body>
+  <footer></footer>
+</html>
