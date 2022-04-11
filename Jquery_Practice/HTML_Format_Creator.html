@@ -40,7 +40,7 @@
         position: relative;
       }
     </style>
-    <title>SecondjQuery</title>
+    <title>HTML Formatter</title>
   </head>
   <body>
     <div id="container">
@@ -68,13 +68,6 @@
             cols="30"
             placeholder="Enter text here..."
           ></textarea>
-          <<<<<<< HEAD =======
-          <label for="how_many_para"
-            >How many paragraphs do you want to add:
-          </label>
-          <input type="number" id="how_many_para" />
-          <<<<<<< HEAD >>>>>>> refs/remotes/origin/main ======= >>>>>>>
-          refs/remotes/origin/main
           <button id="add_button" type="submit">Add Paragraph</button>
         </div>
         <div class="new_para" id="para2">
@@ -153,8 +146,26 @@
         alert(titlesVal);
       });
       $("#add_button").click(function () {
-        $("#para2").css("display", "block");
-        $("#add_button").css("display", "none");
+        if ($("#para2").css("display") == "none") {
+          $("#para2").css("display", "block");
+          $("#add_button").css("display", "none");
+          console.log($("#para2").css("display"));
+        }
+      });
+      $("#add_button2").click(function () {
+        if ($("#para3").css("display") == "none") {
+          $("#para3").css("display", "block");
+          $("#add_button2").css("display", "none");
+          console.log($("#para3").css("display"));
+        }
+      });
+      $("#add_button3").click(function () {
+        if ($("#para4").css("display") == "none") {
+          $("#para4").css("display", "block");
+          $("#add_button3").css("display", "none");
+          console.log($("#para4").css("display"));
+          $("#add_button").click(alert("No more paragraphs to add"));
+        }
       });
     </script>
   </body>
