@@ -57,7 +57,7 @@
           </select>
           <label for="title_in">Write your title: </label>
           <input type="text" id="title_in" placeholder="Title text here..." />
-          <button id="add_header" type="submit">Add Header</button>
+          <!--<button id="add_header" type="submit">Add Header</button>-->
         </div>
         <div class="set_para">
           <label for="para_num">Paragraph-1: </label>
@@ -107,44 +107,12 @@
           <input type="text" name="footer_text" id="footer_text" />
         </div>
       </div>
+      <div id="submit_para">
+        <button id="all_para" type="submit">Submit Info</button>
+      </div>
       <div id="full_format"></div>
     </div>
     <script type="text/javascript">
-      $("#add_header").click(function () {
-        var headerStyle = $("#header_style").val();
-        var titlesVal = $("#title_in").val();
-        var fullFormat = "";
-
-        var sectionTags = ["<section>", "</section>"];
-        var parTags = ["<p>", "</p>"];
-        var titleTags = ["<title>", "</title>"];
-        var meta1 =
-          '<meta name="viewport" content="\width=device-width, initial-scale=1.0" />';
-        var meta2 = '<meta charset="utf-8" />';
-
-        fullFormat = sectionTags[0] + titleTags[0];
-        switch (headerStyle) {
-          case "head_1":
-            break;
-          case "head_2":
-            fullFormat += "<h2>" + titlesVal + "</h2>";
-            break;
-          case "head_3":
-            fullFormat += "<h3>" + titlesVal + "</h3>";
-            break;
-          case "head_4":
-            fullFormat += "<h4>" + titlesVal + "</h4>";
-            break;
-          case "head_5":
-            fullFormat += "<h5>" + titlesVal + "</h5>";
-            break;
-          case "head_6":
-            fullFormat += "<h6>" + titlesVal + "</h6>";
-            break;
-        }
-        console.log(titlesVal);
-        alert(titlesVal);
-      });
       $("#add_button").click(function () {
         if ($("#para2").css("display") == "none") {
           $("#para2").css("display", "block");
@@ -165,6 +133,40 @@
           $("#add_button3").css("display", "none");
           console.log($("#para4").css("display"));
           $("#add_button").click(alert("No more paragraphs to add"));
+        }
+      });
+      $("#all_para").click(function () {
+        var headerStyle = $("#header_style").val();
+        var titlesVal = $("#title_in").val();
+        var fullFormat = "";
+
+        var sectionTags = ["<section>", "</section>"];
+        var parTags = ["<p>", "</p>"];
+        var titleTags = ["<title>", "</title>"];
+        var meta1 =
+          '<meta name="viewport" content="\width=device-width, initial-scale=1.0" />';
+        var meta2 = '<meta charset="utf-8" />';
+
+        fullFormat = sectionTags[0] + titleTags[0];
+        switch (headerStyle) {
+          case "head_1":
+            fullFormat += "<h1>" + titlesVal + "</h1>";
+            break;
+          case "head_2":
+            fullFormat += "<h2>" + titlesVal + "</h2>";
+            break;
+          case "head_3":
+            fullFormat += "<h3>" + titlesVal + "</h3>";
+            break;
+          case "head_4":
+            fullFormat += "<h4>" + titlesVal + "</h4>";
+            break;
+          case "head_5":
+            fullFormat += "<h5>" + titlesVal + "</h5>";
+            break;
+          case "head_6":
+            fullFormat += "<h6>" + titlesVal + "</h6>";
+            break;
         }
       });
     </script>
