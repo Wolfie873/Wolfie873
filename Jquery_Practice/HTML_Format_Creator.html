@@ -160,7 +160,6 @@
           $("#para_num3").val(),
           $("#para_num4").val(),
         ];
-
         fullFormat = sectionTags[0] + titleTags[0];
         switch (headerStyle) {
           case "head_1":
@@ -182,11 +181,7 @@
             fullFormat += "<h6>" + titlesVal + "</h6>\n";
             break;
         }
-        console.log(userInput[0]);
-        console.log(userInput[1]);
-        console.log(userInput[2]);
-        console.log(userInput[3]);
-        console.log(titlesVal);
+        fullFormat += titleTags[1];
         if (userInput[0] != "") {
           fullFormat += parTags[0] + userInput[0] + parTags[1];
         }
@@ -199,6 +194,8 @@
         if (userInput[3] != "") {
           fullFormat += parTags[0] + userInput[3] + parTags[1];
         }
+
+        fullFormat += sectionTags[1];
         $("#full_format").text(fullFormat);
       });
     </script>
