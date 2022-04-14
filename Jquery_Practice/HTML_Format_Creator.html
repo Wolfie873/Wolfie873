@@ -121,26 +121,26 @@
       <div id="full_format"></div>
     </div>
     <script type="text/javascript">/*Internal Javascript to run formatting functionality*/
-      $("#add_button").click(function () {
-        if ($("#para2").css("display") == "none") {
-          $("#para2").css("display", "block");
-          $("#add_button").css("display", "none");
+      $("#add_button").click(function () {/*This adds logic to the add paragraph button*/
+        if ($("#para2").css("display") == "none") {/*Reads status of para2*/
+          $("#para2").css("display", "block");//Makes para2 visible for input
+          $("#add_button").css("display", "none");//Hides add_para button
           console.log($("#para2").css("display"));
         }
       });
       $("#add_button2").click(function () {
-        if ($("#para3").css("display") == "none") {
-          $("#para3").css("display", "block");
-          $("#add_button2").css("display", "none");
+        if ($("#para3").css("display") == "none") {/*Reads status of para3*/
+          $("#para3").css("display", "block");//Makes para3 visible for input
+          $("#add_button2").css("display", "none");//Hides the add_para2 button
           console.log($("#para3").css("display"));
         }
       });
       $("#add_button3").click(function () {
-        if ($("#para4").css("display") == "none") {
-          $("#para4").css("display", "block");
-          $("#add_button3").css("display", "none");
+        if ($("#para4").css("display") == "none") {/*Reads status of para4*/
+          $("#para4").css("display", "block");//Makes para4 visible for input
+          $("#add_button3").css("display", "none");//Hides add_para3 button
           console.log($("#para4").css("display"));
-          $("#add_button").click(alert("No more paragraphs to add"));
+          //$("#add_button").click(alert("No more paragraphs to add"));
         }
       });
       $("#all_para").click(function () {
