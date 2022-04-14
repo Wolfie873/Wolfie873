@@ -1,0 +1,104 @@
+<style>
+	#profilebody{/*Body style*/
+		display: block;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		border-style: solid;
+		border-color: darkred;
+		border-width: 2px;
+		padding-right: 96px;
+		padding-left: 96px;
+	}
+	.logoCad{/*Main Logo*/
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+		background-size: fit-content;
+		background-color: darkred;
+		border-color: darkred;
+		border: 2px;
+	}
+	h1{/*Top Title style*/
+display: block;
+		font-size: xx-large;
+		text-align: center;
+		margin-left: auto;
+        margin-right: auto;
+		width: 50%;
+	}
+	p{/*Paragraph styles*/
+		text-align: justify;
+		font-family: sans-serif;
+		font-size: 18px;
+	}
+	h2{/*Second Title style*/
+		text-align: center;
+		padding: 10px;
+		margin-left: 25%;
+		margin-right: 25%;
+		max-height: fit-content;
+		max-width: fit-content;
+	}
+	#Cad{/*Changes Caduceus text red and bold*/
+		color: darkred;
+		font-weight: bold;
+	}
+	#Q1{/*Q1-Qx are the individual question styles*/
+		background-color: darkred;
+		max-width: 300px;
+		max-height: 150px;
+		text-align: center;
+		color: white;
+	}
+	#Q2{
+		background-color: darkred;
+		max-width: 300px;
+		max-height: 150px;
+		text-align: center;
+		color: white;
+	}
+	#Q3{
+		background-color: darkred;
+		max-width: 300px;
+		max-height: 150px;
+		text-align: center;
+		color: white;
+	}
+	#Q5{
+		background-color: darkred;
+		max-width: 300px;
+		max-height: 150px;
+		text-align: center;
+		color: white;
+	}
+</style><!--End of style page-->
+<header>
+    <meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Letter of Intent</title>
+</header>
+<section>
+	<img src="http://static1.squarespace.com/static/5522eff3e4b041667bbd53de/t/55388705e4b00b1c15c9d73e/1429767942567/Caduceus-Nameplate-450-ISO.png?format=1500w" alt="" width="450" class="logoCad"></img>
+    <h1>Letter Of Intent</h1>
+	<h2>PROJECT TITLE: Directorate of Visa Services: Contract Program Manager</h2>
+	</br>
+	<h3>SOLICITATION NUMBER: 19AQMM22R0016</h3>
+	</br>
+	<p>This letter is to confirm that I have submitted my qualifications to <span id="Cad">Caduceus</span> for consideration to work with the Directorate of Visa Services. 
+	Caduceus has agreed to submit my resume/CV and requested documentation in response to this government bid opportunity. 
+	I have not authorized any other firm to submit my credentials for this opportunity.</p>
+	<p>At this time, I am very interested in being considered for this position and intend to follow-through with the award process should I be chosen as a bid awardee in response to this government assignment opportunity. 
+	I have received a Statement of Work (SOW) containing the duties/tasks/responsibilities/expectations/clearances required of me for this opportunity and I agree that I meet the requirements listed.</p>
+	<p>I do not have any of the following current situations that may prevent me from accepting the responsibility at this facility: Domestic family issues, current health issues, current contract obligations 
+	or other known situations that would prevent me from the acceptance, performance and completion of a government contract award assignment.</p>
+	<p>Barring any natural disasters, call to duty, personal injury or illness, births or deaths in the family. 
+	I am not aware of any issues of any kind that would prevent me from completing this assignment as agreed at the time of candidacy submission. 
+	Should a situation arise unexpectedly, I agree to notify Caduceus immediately and 
+	<b>PRIOR TO BID AWARD ANNOUNCEMENT</b> of such occurrence with the understanding that my candidacy will be revoked and the facility in question notified to pull my candidacy.</p>
+	</br></br>
+	<div id="Q1">[[Q1]] [[A1]]</div>
+	<div id="Q2">[[Q2]] [[A2]]</div>
+	<div id="Q3">[[Q3]] [[A3]]</div>
+	<div id="Q4">[[Q4]] [[A4]]</div>
+	<div id="Q5">[[Q5]] [[A5]]</div>
+</section>
