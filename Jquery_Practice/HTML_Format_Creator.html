@@ -1,13 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!--Document Type-->
+<html lang="en"><!--Language set-->
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!--Resize viewport meta-->
+    <meta charset="utf-8" /><!--Charset basic-->
     <script
       type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    ></script>
+    ></script><!--JQuery script source-->
     <style type="text/css">
+    /*Full internal css*/
+
+    /*Header styles*/
       #head1 {
         font-weight: bold;
         font-size: 32px;
@@ -32,9 +35,13 @@
         font-weight: bold;
         font-size: 11.2px;
       }
+
+      /*Initial paragraph style*/
       .set_para {
         position: relative;
       }
+
+      /*Set new paragraph style*/
       .new_para {
         display: none;
         position: relative;
@@ -43,11 +50,11 @@
     <title>HTML Formatter</title>
   </head>
   <body>
-    <div id="container">
-      <div id="input_info">
-        <div id="header_choice">
-          <label for="header_style">Select title style: </label>
-          <select id="header_style" name="header_style">
+    <div id="container"><!--Full container for the page, separate from body for convenience-->
+      <div id="input_info"><!--All the input commands grouped together-->
+        <div id="header_choice"><!--Header chice full division-->
+          <label for="header_style">Select title style: </label><!--Label is important to name the element that will be input-->
+          <select id="header_style" name="header_style"><!--A dropdown choice for the different header styles. Should give a preview of the size in real time-->
             <option value="head_1" id="head1">Biggest 32px</option>
             <option value="head_2" id="head2">Bigger 24px</option>
             <option value="head_3" id="head3">Big 20.8px</option>
@@ -59,8 +66,8 @@
           <input type="text" id="title_in" placeholder="Title text here..." />
           <!--<button id="add_header" type="submit">Add Header</button>-->
         </div>
-        <div class="set_para">
-          <label for="para_num">Paragraph-1: </label>
+        <div class="set_para"><!--Initial paragraph shown at load-->
+          <label for="para_num">Paragraph-1: </label><!--Label for the textarea where the first paragraph is shown-->
           <textarea
             name="para_num"
             id="para_num"
@@ -70,7 +77,7 @@
           ></textarea>
           <button id="add_button" type="submit">Add Paragraph</button>
         </div>
-        <div class="new_para" id="para2">
+        <div class="new_para" id="para2"><!--Additional paragraphs to add. Will only be 4 allowed-->
           <label for="para_num2">Paragraph-2: </label>
           <textarea
             name="para_num2"
@@ -102,17 +109,18 @@
             placeholder="Enter text here..."
           ></textarea>
         </div>
+        <!--Here ends the paragraphs to add. Important: they are hidden at load and added via add button-->
         <div id="set_footer">
           <label for="footer_text">Set your footer: </label>
           <input type="text" name="footer_text" id="footer_text" />
         </div>
       </div>
-      <div id="submit_para">
+      <div id="submit_para"><!--Button to process the information and format it-->
         <button id="all_para" type="submit">Submit Info</button>
       </div>
       <div id="full_format"></div>
     </div>
-    <script type="text/javascript">
+    <script type="text/javascript">/*Internal Javascript to run formatting functionality*/
       $("#add_button").click(function () {
         if ($("#para2").css("display") == "none") {
           $("#para2").css("display", "block");
