@@ -15,18 +15,39 @@
     <title>UIjQuery</title>
     <style>
       #draggable {
-        width: 150px;
-        height: 150px;
+        width: 50px;
+        height: 50px;
         background-color: red;
         border: 1px solid black;
         color: white;
         padding: 0px;
         margin: 0px;
+        font-size: 12px;
       }
       #container {
-        width: 500px;
-        height: 500px;
+        width: 200px;
+        height: 200px;
         border: 5px solid black;
+      }
+      #resize {
+        width: 200px;
+        height: 200px;
+        padding: 0.5em;
+        background-color: grey;
+      }
+      #resize2 {
+        width: 200px;
+        height: 200px;
+        padding: 0.5em;
+        background-color: blue;
+      }
+      h1{
+        font: size 15px;
+        text-align: center;
+        color: white;
+      }
+      .ui-container {
+        float: left;
       }
     </style>
     <script>
@@ -35,14 +56,30 @@
           containment: "parent",
           scroll: false,
         });
+        $("#resize").resizable({ 
+          animate: true,
+          grid: 50, 
+          alsoResize: "#resize2", 
+          resize: function( event, ui ) 
+          {
+          if($("#resize").width() > 300){
+            alert("Resized");
+          }
+        }
+        });
+        $("resize2").resizable();
       });
     </script>
   </head>
   <body>
-    <div id="container">
+    <div id="container" class="ui-container">
         <p id="draggable">Drag me around</p>
       </div>
     </div>
+    <div id="resize" class="ui-container">
+      <h1>Rezize Me Motherfucker</h1>
+    </div>
+    <div  id="resize2"class="ui-container"><h1>I move too, kinda</h1></div>
   </body>
   <footer></footer>
 </html>
