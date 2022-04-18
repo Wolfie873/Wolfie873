@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script src="../Jquery_Practice/jquery-ui-1.13.1/jquery-ui.js"></script>
+    <link
+      rel="stylesheet"
+      href="../Jquery_Practice/jquery-ui-1.13.1/jquery-ui.css"
+    />
+    <title>UIjQuery</title>
+    <style>
+      #dropContainer {
+        width: 500px;
+        height: 500px;
+        margin: auto;
+        background-color: grey;
+      }
+      #draggable {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        font-size: 12px;
+        color: white;
+        padding: 0.5em;
+      }
+      #droppable {
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        color: black;
+        text-align: center;
+        margin: auto;
+        padding: 0.5em;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("#draggable").draggable();
+        $("#droppable").droppable({
+          drop: function (event, ui) {
+            $(this)
+              .addClass("ui-state-highlight")
+              .find("p")
+              .html("Dropped!")
+              .css({
+                backgroundColor: "yellow",
+                width: "200px",
+                height: "200px",
+              });
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="dropContainer">
+      <div id="draggable">
+        <p>Drop me somewhere</p>
+      </div>
+      <div id="droppable">
+        <p>Drop it here</p>
+      </div>
+    </div>
+  </body>
+  <footer></footer>
+</html>
