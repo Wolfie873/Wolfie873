@@ -1,3 +1,5 @@
+<!--This ia a test project that outputs HTML CSS and Javascript into the window as you type it. 
+It is written in JQUERY as practice.-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -94,7 +96,9 @@
     <div id="bodyContainer">
       <textarea id="htmlPanel" class="panels"><p id="description">Hello World</p></textarea>
       <textarea id="cssPanel" class="panels hidden">p {color: green}</textarea>
-      <textarea id="javascriptPanel" class="panels hidden">document.getElementById('description').innerHTML = "Goodbye Hello Maybe";</textarea>
+      <textarea id="javascriptPanel" class="panels hidden">
+        document.getElementById('description').innerHTML = "Goodbye Hello Maybe";
+      </textarea>
       <iframe id="outputPanel" class="panels"></iframe>
     </div>
     <script>
@@ -130,8 +134,7 @@
       updateOutput();
       $("textarea").on("change keyup paste",function(e) {
         updateOutput()
-      });
-      
+      }); 
     </script>
   </body>
   <footer></footer>
