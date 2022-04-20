@@ -72,6 +72,12 @@
         border: 1px solid gray;
         border-top: none;
         border-bottom: none;
+        border-left: none;
+        padding: 0;
+        margin: 0;
+      }
+      .hidden{
+        display: none;
       }
     </style>
   </head>
@@ -86,10 +92,19 @@
       </div>
     </div>
     <div id="bodyContainer">
-      <textarea id="htmlPanel" class="panels">Hello World</textarea>
+      <textarea id="htmlPanel" class="panels"><p id="description">Hello World</p></textarea>
+      <textarea id="cssPanel" class="panels hidden">p {color: green}</textarea>
+      <textarea id="javascriptPanel" class="panels hidden">document.getElementById('description').innerHTML = "Goodbye Hello Maybe";</textarea>
       <iframe id="outputPanel" class="panels"></iframe>
     </div>
     <script>
+
+      function updateOutput() {
+        $("#outputPanel").contents().find("html").html("<html><head><style type='text/css'>"
+          + $("#cssPanel").val() + "</style></head><body>"
+            + $("#htmlPanel").val() + "</body></html>");
+            document.getElementById("outputPanel").contentWindow.eval($("#javascriptPanel").val());
+      }
 
       $(".toggleButton").hover(
         function () {
@@ -103,14 +118,18 @@
       $(".toggleButton").click(function () {
         $(this).toggleClass("active");
         $(this).removeClass("highlightedButton");
+        var panelID = $(this).attr("id") + "Panel";
+        $("#" + panelID).toggleClass("hidden");
+        var numberOfActivePanels = 4 - $(".hidden").length;
+        $(".panels").width(($(window).width() / numberOfActivePanels) - 15);
       });
 
       $(".panels").height($(window).height() - $("#topbar").height());
-      $(".panels").width(($(window).width() / 2) - ($(window).outerWidth() - $(window).innerWidth() - ($(window).innerWidth() - $(window).width()) - ($(window).outerWidth(true) - ($(window).outerWidth()))));
+      $(".panels").width(($(window).width() / 2) - 15);
 
-      $("#outputPanel").contents().find("html").html($("#htmlPanel").val());
-      $("#htmlPanel").on("change keyup paste", function(){
-        $("#outputPanel").contents().find("html").html($("#htmlPanel").val());
+      updateOutput();
+      $("textarea").on("change keyup paste",function(e) {
+        updateOutput()
       });
       
     </script>
