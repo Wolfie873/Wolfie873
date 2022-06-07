@@ -1,0 +1,612 @@
+@media only screen and (min-width: 1200px){
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: 
+        -apple-system, 
+        BlinkMacSystemFont, 
+        'Segoe UI', 
+        Roboto, 
+        Oxygen, 
+        Ubuntu, 
+        Cantarell, 
+        'Open Sans', 
+        'Helvetica Neue', 
+        sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+    }
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        color: currentColor;
+        text-decoration: none;
+    }
+    .navbar{
+        height: 70px;
+        width: 100%;
+        background: var(--bg-nav);
+        color: var(--text);
+    }
+    .navbar-nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+    header{
+        padding: 1em;
+        background: var(--grey4);
+        margin-bottom: 1em;
+        padding-bottom: 3.5rem;
+        text-align: center;
+        clip-path: polygon(0.61% 1px, 100% 0px, 100% 65%, 51.43% 100.55%, 80px 73.05%, 106px 110px);
+    }
+    .dropdown{
+        position: absolute;
+        width: 500px;
+        opacity: 0;
+        z-index: 2;
+        background: var(--blue);
+        border: 2px solid var(--grey1);
+
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 3rem;
+        margin-top: 2rem;
+        padding: 0.5rem;
+
+        box-shadow: rgba(2, 8, 20, 0.1) 0px 0.175rem 0.5;
+        transform: translate(-40%);
+
+        transition: opacity .15s ease-out;
+
+    }
+    .has-dropdown:focus-within .dropdown{
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .dropdown-item a{
+        width: 100%;
+        height: 100%;
+        size: 0.7rem;
+        padding-left: 10px;
+        font-weight: bold;
+    }
+    .dropdown-item a::before{
+        content: ' ';
+        border: 2px solid var(--grey1);
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    :root{
+
+        --grey1: #D6D6D6;
+        --grey2: #808085;
+        --grey3: #595959;
+        --grey4: #363636;
+        --grey5: #191919;
+        --grey6: #A5A5A5;
+        --wine: #461220;
+        --violet: #8C2F39;
+        --blue: #2978A0;
+        --yellow: #BCAB79;
+
+    }
+    .light{
+        --bg: var(--grey1);
+        --bg-nav: linear-gradient(to right, var(--grey1), var(--grey3));
+        --bg-dropdown: var(--grey1);
+        --text: var(--grey5);
+        --border-color: var(--blue);
+        --bg-solar: var(--yellow);
+
+    }
+    .dark{
+        --bg: var(--grey5);
+        --bg-nav: linear-gradient(to right, var(--grey3), var(--grey5));
+        --bg-dropdown: var(--grey5);
+        --text: var(--yellow);
+        --border-color: var(--wine);
+        --bg-solar: var(--yellow); 
+
+    }
+    .solar{
+        --grey1: #f1ffd6;
+        --grey2: #aae38a;
+        --grey3: #68d03f;
+        --grey4: #6bbb0e;
+        --grey5: #32af04;
+        --grey6: #dadd5c;
+        --wine: #b62d51;
+        --violet: #e71f33;
+        --blue: #00aaff;
+        --yellow: #ffe081;
+    }
+    @keyframes color-rotate{
+        from{
+            filter: hue-rotate(0deg);
+        }
+        to{
+            filter: hue-rotate(360deg);
+        }
+    }
+    .logo:hover{
+        animation: color-rotate 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1200px){
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: 
+        -apple-system, 
+        BlinkMacSystemFont, 
+        'Segoe UI', 
+        Roboto, 
+        Oxygen, 
+        Ubuntu, 
+        Cantarell, 
+        'Open Sans', 
+        'Helvetica Neue', 
+        sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+    }
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        color: currentColor;
+        text-decoration: none;
+    }
+    .navbar{
+        height: 50px;
+        width: 100%;
+        background: var(--bg-nav);
+        color: var(--text);
+    }
+    .navbar-nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+    header{
+        padding: 0.5em;
+        background: var(--grey4);
+        margin-bottom: 0.5em;
+        padding-bottom: 2rem;
+        text-align: center;
+        clip-path: polygon(0.61% 1px, 100% 0px, 100% 65%, 51.43% 100.55%, 80px 73.05%, 106px 110px);
+    }
+    .dropdown{
+        position: absolute;
+        width: 300px;
+        opacity: 0;
+        z-index: 2;
+        background: var(--blue);
+        border: 2px solid var(--grey1);
+
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 2rem;
+        margin-top: 1rem;
+        padding: 0.5rem;
+
+        box-shadow: rgba(2, 8, 20, 0.1) 0px 0.175rem 0.5;
+        transform: translate(-40%);
+
+        transition: opacity .15s ease-out;
+
+    }
+    .has-dropdown:focus-within .dropdown{
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .dropdown-item a{
+        width: 100%;
+        height: 100%;
+        size: 0.5rem;
+        padding-left: 8px;
+        font-weight: bold;
+    }
+    .dropdown-item a::before{
+        content: ' ';
+        border: 2px solid var(--grey1);
+        border-radius: 50%;
+        width: 1rem;
+        height: 1rem;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 8px;
+    }
+
+    :root{
+
+        --grey1: #D6D6D6;
+        --grey2: #808085;
+        --grey3: #595959;
+        --grey4: #363636;
+        --grey5: #191919;
+        --grey6: #A5A5A5;
+        --wine: #461220;
+        --violet: #8C2F39;
+        --blue: #2978A0;
+        --yellow: #BCAB79;
+
+    }
+    .light{
+        --bg: var(--grey1);
+        --bg-nav: linear-gradient(to right, var(--grey1), var(--grey3));
+        --bg-dropdown: var(--grey1);
+        --text: var(--grey5);
+        --border-color: var(--blue);
+        --bg-solar: var(--yellow);
+
+    }
+    .dark{
+        --bg: var(--grey5);
+        --bg-nav: linear-gradient(to right, var(--grey3), var(--grey5));
+        --bg-dropdown: var(--grey5);
+        --text: var(--yellow);
+        --border-color: var(--wine);
+        --bg-solar: var(--yellow); 
+
+    }
+    .solar{
+        --grey1: #f1ffd6;
+        --grey2: #aae38a;
+        --grey3: #68d03f;
+        --grey4: #6bbb0e;
+        --grey5: #32af04;
+        --grey6: #dadd5c;
+        --wine: #b62d51;
+        --violet: #e71f33;
+        --blue: #00aaff;
+        --yellow: #ffe081;
+    }
+    @keyframes color-rotate{
+        from{
+            filter: hue-rotate(0deg);
+        }
+        to{
+            filter: hue-rotate(360deg);
+        }
+    }
+    .logo:hover{
+        animation: color-rotate 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px){
+
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: 
+        -apple-system, 
+        BlinkMacSystemFont, 
+        'Segoe UI', 
+        Roboto, 
+        Oxygen, 
+        Ubuntu, 
+        Cantarell, 
+        'Open Sans', 
+        'Helvetica Neue', 
+        sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+    }
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        color: currentColor;
+        text-decoration: none;
+    }
+    .navbar{
+        height: 30px;
+        width: 100%;
+        background: var(--bg-nav);
+        color: var(--text);
+    }
+    .navbar-nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+    header{
+        padding: 0.25em;
+        background: var(--grey4);
+        margin-bottom: 0.25em;
+        padding-bottom: 1rem;
+        text-align: center;
+        clip-path: polygon(12.27% -5px, 100% 0px, 100% 65%, 99.89% 97.75%, 8px 98.92%, 5px 101px);
+    }
+    .dropdown{
+        position: absolute;
+        width: 150px;
+        opacity: 0;
+        z-index: 2;
+        background: var(--blue);
+        border: 2px solid var(--grey1);
+    
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 1rem;
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+    
+        box-shadow: rgba(2, 8, 20, 0.1) 0px 0.175rem 0.5;
+        transform: translate(-40%);
+    
+        transition: opacity .15s ease-out;
+        font-size: 10px;
+    
+    }
+    .has-dropdown:focus-within .dropdown{
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .dropdown-item a{
+        width: 100%;
+        height: 100%;
+        size: 0.3rem;
+        padding-left: 5px;
+        font-weight: bold;
+    }
+    .dropdown-item a::before{
+        content: ' ';
+        border: 2px solid var(--grey1);
+        border-radius: 50%;
+        width: 0.5rem;
+        height: 0.5rem;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+    
+    :root{
+    
+        --grey1: #D6D6D6;
+        --grey2: #808085;
+        --grey3: #595959;
+        --grey4: #363636;
+        --grey5: #191919;
+        --grey6: #A5A5A5;
+        --wine: #461220;
+        --violet: #8C2F39;
+        --blue: #2978A0;
+        --yellow: #BCAB79;
+    
+    }
+    .light{
+        --bg: var(--grey1);
+        --bg-nav: linear-gradient(to right, var(--grey1), var(--grey3));
+        --bg-dropdown: var(--grey1);
+        --text: var(--grey5);
+        --border-color: var(--blue);
+        --bg-solar: var(--yellow);
+    
+    }
+    .dark{
+        --bg: var(--grey5);
+        --bg-nav: linear-gradient(to right, var(--grey3), var(--grey5));
+        --bg-dropdown: var(--grey5);
+        --text: var(--yellow);
+        --border-color: var(--wine);
+        --bg-solar: var(--yellow); 
+    
+    }
+    .solar{
+        --grey1: #f1ffd6;
+        --grey2: #aae38a;
+        --grey3: #68d03f;
+        --grey4: #6bbb0e;
+        --grey5: #32af04;
+        --grey6: #dadd5c;
+        --wine: #b62d51;
+        --violet: #e71f33;
+        --blue: #00aaff;
+        --yellow: #ffe081;
+    }
+    @keyframes color-rotate{
+        from{
+            filter: hue-rotate(0deg);
+        }
+        to{
+            filter: hue-rotate(360deg);
+        }
+    }
+    .logo:hover{
+        animation: color-rotate 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    
+}
+@media only screen and (min-width: 50px) and (max-width: 576px){
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: 
+        -apple-system, 
+        BlinkMacSystemFont, 
+        'Segoe UI', 
+        Roboto, 
+        Oxygen, 
+        Ubuntu, 
+        Cantarell, 
+        'Open Sans', 
+        'Helvetica Neue', 
+        sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+    }
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        color: currentColor;
+        text-decoration: none;
+    }
+    .navbar{
+        height: 20px;
+        width: 100%;
+        background: var(--bg-nav);
+        color: var(--text);
+    }
+    .navbar-nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+    header{
+        padding: 0.25em;
+        background: var(--grey4);
+        margin-bottom: 0.2em;
+        padding-bottom: 0.5rem;
+        text-align: center;
+        clip-path: polygon(1.12% -12px, 100% 0px, 100% 65%, 99.39% 99.83%, 7px 100.38%, 6px 215px);
+    }
+    .dropdown{
+        position: absolute;
+        width: 100px;
+        opacity: 0;
+        z-index: 2;
+        background: var(--blue);
+        border: 1px solid var(--grey1);
+    
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 0.5rem;
+        margin-top: 0.2rem;
+        padding: 0.5rem;
+    
+        box-shadow: rgba(2, 8, 20, 0.1) 0px 0.175rem 0.5;
+        transform: translate(-40%);
+    
+        transition: opacity .15s ease-out;
+        font-size: 8px;
+    
+    }
+    .has-dropdown:focus-within .dropdown{
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .dropdown-item a{
+        width: 100%;
+        height: 100%;
+        size: 0.2rem;
+        padding-left: 2.5px;
+        font-weight: bold;
+    }
+    .dropdown-item a::before{
+        content: ' ';
+        border: 2px solid var(--grey1);
+        border-radius: 50%;
+        width: 0.15rem;
+        height: 0.15rem;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+    
+    :root{
+    
+        --grey1: #D6D6D6;
+        --grey2: #808085;
+        --grey3: #595959;
+        --grey4: #363636;
+        --grey5: #191919;
+        --grey6: #A5A5A5;
+        --wine: #461220;
+        --violet: #8C2F39;
+        --blue: #2978A0;
+        --yellow: #BCAB79;
+    
+    }
+    .light{
+        --bg: var(--grey1);
+        --bg-nav: linear-gradient(to right, var(--grey1), var(--grey3));
+        --bg-dropdown: var(--grey1);
+        --text: var(--grey5);
+        --border-color: var(--blue);
+        --bg-solar: var(--yellow);
+    
+    }
+    .dark{
+        --bg: var(--grey5);
+        --bg-nav: linear-gradient(to right, var(--grey3), var(--grey5));
+        --bg-dropdown: var(--grey5);
+        --text: var(--yellow);
+        --border-color: var(--wine);
+        --bg-solar: var(--yellow); 
+    
+    }
+    .solar{
+        --grey1: #f1ffd6;
+        --grey2: #aae38a;
+        --grey3: #68d03f;
+        --grey4: #6bbb0e;
+        --grey5: #32af04;
+        --grey6: #dadd5c;
+        --wine: #b62d51;
+        --violet: #e71f33;
+        --blue: #00aaff;
+        --yellow: #ffe081;
+    }
+    @keyframes color-rotate{
+        from{
+            filter: hue-rotate(0deg);
+        }
+        to{
+            filter: hue-rotate(360deg);
+        }
+    }
+    .logo:hover{
+        animation: color-rotate 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+}
