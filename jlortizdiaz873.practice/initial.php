@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+session_start();
 
     if (array_key_exists('email', $_POST) OR array_key_exists('password', $_POST)) {
         
@@ -36,7 +38,9 @@
                 
                 if (mysqli_query($link, $query)) {
                     
-                    echo "<p>You have been signed up!";
+                    $_SESSION['email'] = $_POST['email'];
+
+                    header('Location: sesion.php');
                     
                 } else {
                     
@@ -98,10 +102,10 @@
             <div class="col d-flex justify-content-center">
                 <form method="post">
                     <h1>Hello There!</h1>
-                    <p><label for="name" class="form-item">What is your name: <br><sub>Please place real name
+                    <p><label for="email" class="form-item">What is your name: <br><sub>Please place real name
                                 here</sub></label>
                         <br>
-                        <input type="text" id="name" name="name" placeholder="name here">
+                        <input type="email" id="email" name="email" placeholder="email@email.com">
                     </p>
                     <p><label for="password" class="form-item">Enter your password: <br><sub>Must contain at least 6
                                 characters
@@ -111,7 +115,6 @@
                     </p>
                     <input type="submit" value="Submit">
                 </form>
-                <p>Hello</p>
             </div>
         </div>
     </div>
