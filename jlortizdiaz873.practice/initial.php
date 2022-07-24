@@ -1,31 +1,58 @@
-<?php 
+<?php
 
-    $link = mysqli_connect("sdb-w.hosting.stackcp.net", "users_database-323133aa08", "djeqlnu3o9", "users_database-323133aa08");
+session_start();
 
+    if (array_key_exists('email', $_POST) OR array_key_exists('password', $_POST)) {
+        
+        $link = mysqli_connect("sdb-w.hosting.stackcp.net", "users_database-323133aa08", "djeqlnu3o9", "users_database-323133aa08");
 
-    if(array_key_exists('name', $_POST) OR array_key_exists('passwords', $_POST)){
+        
+            if (mysqli_connect_error()) {
+        
+                die ("There was an error connecting to the database");
+        
+            } 
+        
+        
+        if ($_POST['email'] == '') {
+            
+            echo "<p>Email address is required.</p>";
+            
+        } else if ($_POST['password'] == '') {
+            
+            echo "<p>Password is required.</p>";
+            
+        } else {
+            
+            $query = "SELECT `id` FROM `users` WHERE email = '".mysqli_real_escape_string($link, $_POST['email'])."'";
+            
+            $result = mysqli_query($link, $query);
+            
+            if (mysqli_num_rows($result) > 0) {
+                
+                echo "<p>That email address has already been taken.</p>";
+                
+            } else {
+                
+                $query = "INSERT INTO `users` (`email`, `password`) VALUES ('".mysqli_real_escape_string($link, $_POST['email'])."', '".mysqli_real_escape_string($link, $_POST['password'])."')";
+                
+                if (mysqli_query($link, $query)) {
+                    
+                    $_SESSION['email'] = $_POST['email'];
 
-        if($_POST['name'] == ''){
-            echo "No email address";
-            echo $_POST['passwords'];
+                    header('Location: sesion.php');
+                    
+                } else {
+                    
+                    echo "<p>There was a problem signing you up - please try again later.</p>";
+                    
+                }
+                
+            }
+            
         }
         
-        if($_POST['passwords'] == ''){
-            echo $_POST['name'];
-            echo "No password available";
-        }
-
-        else{
-            echo $_POST['name'];
-            echo $_POST['passwords'];
-        }
         
-    }
-
-    if(mysqli_connect_error()){
-
-    die("Sorry, could not connect");
-
     }
 
     // $query = "INSERT INTO `users` (`email`, `password`) VALUES ('', '')"; Inserts record
@@ -75,20 +102,19 @@
             <div class="col d-flex justify-content-center">
                 <form method="post">
                     <h1>Hello There!</h1>
-                    <p><label for="name" class="form-item">What is your name: <br><sub>Please place real name
+                    <p><label for="email" class="form-item">What is your name: <br><sub>Please place real name
                                 here</sub></label>
                         <br>
-                        <input type="text" id="name" name="name" placeholder="name here">
+                        <input type="email" id="email" name="email" placeholder="email@email.com">
                     </p>
-                    <p><label for="passwords" class="form-item">Enter your password: <br><sub>Must contain at least 6
+                    <p><label for="password" class="form-item">Enter your password: <br><sub>Must contain at least 6
                                 characters
                                 and 1 number</sub></label>
                         <br>
-                        <input type="password" name="passwords" id="passwords">
+                        <input type="password" name="password" id="password">
                     </p>
                     <input type="submit" value="Submit">
                 </form>
-                <p>Hello</p>
             </div>
         </div>
     </div>
