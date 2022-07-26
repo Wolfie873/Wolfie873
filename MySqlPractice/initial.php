@@ -1,6 +1,11 @@
 <?php
-mysqli_connect('127.0.0.1', 'root', null, 'testThisTable');
+mysqli_connect('localhost', 'sa', 'admin@jl873', 'Jorge');
 
-echo mysqli_connect_error();
+ if(mysqli_connect_error()){
+    echo "There was an error in the connection";
+ }
+ else{
+    echo "Connected to the database";
+ }
 
 ?>
