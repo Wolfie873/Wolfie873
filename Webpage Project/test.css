@@ -22,6 +22,10 @@ body {
   margin-right: 0px;
   color: #20232a;
 }
+#main-bod{
+	width: 90vw;
+	display:inline-block;
+	}
 .topbar {
   display: flex;
   background-color: #a01d26;
@@ -119,11 +123,16 @@ a {
   text-decoration: none;
 }
 .sidebar {
-  display: block;
-  height: 100%;
-  width: 100%;
+  display: inline-block;
+  height: 100vh;
+  width: 9vw;
   color: white;
   background-color: #20232a;
   padding-top: 10px;
   padding-right: 10px;
 }
+#projects-list{
+	list-style-type: none;
+	margin: auto;
+	padding: 10px;
+	}
