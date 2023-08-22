@@ -16,32 +16,119 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>InfoTechPenguin</title>
     <style>
+      a {
+        color: white;
+        text-decoration: solid;
+        background-color: rgb(54, 54, 54);
+      }
+
+      .nav-pills,
+      .nav-link:active {
+        background-color: rgb(54, 54, 54) !important;
+        color: white !important;
+      }
+
+      .nav-link:hover {
+        background-color: antiquewhite !important;
+        color: black !important;
+      }
     </style>
   </head>
 
   <body>
     <nav>
-      <div class="nav nav-pills nav-fill bg-dark" id="nav-tab" role="tablist">
-        <a class="nav-link text-primary-emphasis bg-dark active" id="nav-bio-tab" data-bs-toggle="tab" href="#nav-bio"
+      <div class="nav nav-pills nav-fill" id="nav-tab" role="tablist">
+        <a class="navbar-brand" href="#"><img src="./images/ITPenguinLogo.png" alt="penguinLogo"
+            style="height: 30px; width:30px;" /></a>
+        <a class="nav-link text-primary-emphasis active" id="nav-bio-tab" data-bs-toggle="tab" href="#nav-bio"
           role="tab" aria-controls="nav-bio" aria-selected="true">Bio</a>
-        <a class="nav-link text-primary-emphasis bg-dark" id="nav-infotech-tab" data-bs-toggle="tab"
-          href="#nav-infotech" role="tab" aria-controls="nav-infotech" aria-selected="false">Info Tech Penguin</a>
-        <a class="nav-link text-primary-emphasis bg-dark" id="nav-gramita-tab" data-bs-toggle="tab" href="#nav-gramita"
+        <a class="nav-link text-primary-emphasis" id="nav-infotech-tab" data-bs-toggle="tab" href="#nav-infotech"
+          role="tab" aria-controls="nav-infotech" aria-selected="false">Info Tech Penguin</a>
+        <a class="nav-link text-primary-emphasis" id="nav-gramita-tab" data-bs-toggle="tab" href="#nav-gramita"
           role="tab" aria-controls="nav-gramita" aria-selected="false">Gramita Mowing</a>
-        <a class="nav-link text-primary-emphasis bg-dark" id="nav-pinguino-tab" data-bs-toggle="tab"
-          href="#nav-pinguino" role="tab" aria-controls="nav-pinguino" aria-selected="false">Pinguino Etiquetero</a>
-        <a class="nav-link text-primary-emphasis bg-dark" id="nav-stream-tab" data-bs-toggle="tab" href="#nav-stream"
-          role="tab" aria-controls="nav-stream" aria-selected="false">Streaming</a>
-        <a class="nav-link text-primary-emphasis bg-dark" id="nav-contact-tab" data-bs-toggle="tab" href="#nav-contact"
+        <a class="nav-link text-primary-emphasis" id="nav-pinguino-tab" data-bs-toggle="tab" href="#nav-pinguino"
+          role="tab" aria-controls="nav-pinguino" aria-selected="false">Pinguino Etiquetero</a>
+        <a class="nav-link text-primary-emphasis" id="nav-stream-tab" data-bs-toggle="tab" href="#nav-stream" role="tab"
+          aria-controls="nav-stream" aria-selected="false">Streaming</a>
+        <a class="nav-link text-primary-emphasis" id="nav-contact-tab" data-bs-toggle="tab" href="#nav-contact"
           role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
       </div>
     </nav>
+    <div class="row">&nbsp;</div>
     <div class="tab-content" id="nav-tabContent">
       <div class="tab-pane fade show active" id="nav-bio" role="tabpanel" aria-labelledby="nav-bio-tab">
-        <p>Bio paragraph</p>
+        <div class="container-md">
+          <div class="row">
+            <div class="col-8 align-self-start">
+              <h1>Welcome</h1>
+              <p>
+                Welcome! Here you’ll find the achievements, projects and general
+                professional ideas that I have worked on/created. A bit about myself.
+                My name is Jorge Ortiz Diaz, and I’ve lived in Puerto Rico most of my
+                life. Throughout my life, my goal has been to better educate myself
+                and gain expertise in many fields. These fields include:
+              </p>
+              <ul class="main_list" id="skills_list">
+                <li>Digital Art</li>
+                <li>Writing/Editing/Publishing</li>
+                <li>Copywriting and Graphic Design</li>
+                <li>Video Editing</li>
+                <li>Deep Technological Knowledge</li>
+                <li>Data Entry and Database Management</li>
+                <li>Programming Knowledge:</li>
+                <ul class="main_list" id="lang_list">
+                  <li>HTML5</li>
+                  <li>CSS</li>
+                  <li>Python</li>
+                  <li>Javascript</li>
+                </ul>
+              </ul>
+              <p>
+                I have a Bachelor’s Degree in Advertising from the University of
+                Puerto Rico Carolina campus and some formal education in computer
+                engineering, although most of my other talents have been self-taught.
+                Self-published a full novel, a collection of short stories and a
+                miniseries. Started a webcomic series. Among many other projects I am
+                constantly working on throughout the year.
+              </p>
+              <p>
+                Browse around and contact me if anything catches your eye. Always open
+                to collaborations and commissions.
+            </div>
+          </div>
+        </div>
       </div>
       <div class="tab-pane fade" id="nav-infotech" role="tabpanel" aria-labelledby="nav-infotech-tab">
-        <p>Info Tech panel</p>
+        <div class="container">
+          <div class="row">
+            <div class="col align-self-center">
+              <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/videoseries?list=PLf38KowN0MvYBmjWMVUCRddaUrGrZ-2IQ"
+                title="Info Tech Pengunin First Customer" frameborder="1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="col">
+              <h3>Info Tech Penguin - Tech Solutions </h3>
+              <p>Con sobre 5 años de experiencia en servicios technologicos y al menos 15 de conocimiento avanzado de
+                equipos. Administador de sistemas y experiencia en las siguientes technologias:
+              <ul class="list-gorup">
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+                <li class="list-group-item"></li>
+              </ul>
+              </p>
+
+            </div>
+          </div>
+        </div>
       </div>
       <div class="tab-pane fade" id="nav-gramita" role="tabpanel" aria-labelledby="nav-gramita-tab">
         <p>clicked gramita</p>
@@ -61,6 +148,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
       crossorigin="anonymous"></script>
+
+    <script>function changeColorHover() {
+        document.getElementsByClassName("nav-link").toggle("bg-dark");
+
+      }</script>
   </body>
 
 </html>
