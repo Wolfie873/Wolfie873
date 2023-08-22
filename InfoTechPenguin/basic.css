@@ -1,0 +1,17 @@
+a {
+    color: white;
+    text-decoration: solid;
+    background-color: rgb(54, 54, 54);
+  }
+
+  .nav-pills,
+  .nav-link:active {
+    background-color: rgb(54, 54, 54) !important;
+    color: white !important;
+  }
+
+  .nav-link:hover {
+    background-color: antiquewhite !important;
+    color: black !important;
+  }
+  .nav-pills .nav-link.active { background-color: black;}
