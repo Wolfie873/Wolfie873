@@ -41,7 +41,7 @@ console.log(fullName.toUpperCase());
 // Symbol
 */
 
-/* Chapter 2 Strings */
+/* Chapter 2 Strings
 //string concatenation
 
 let firstName = 'Jorge';
@@ -60,3 +60,47 @@ console.log(fullName.length);
 //string methods
 console.log(fullName.toUpperCase());
 let result = fullName.toLowerCase();
+*/
+
+/* Chapter 3 Numbers*/
+
+// math operators +, -, *, /, **, %
+let radius = 10;
+const pi = 3.14;
+
+console.log(10/2);
+let result = radius % 3;
+
+console.log(result);
+
+//order of operations - B I D M A S / PEMDAS español
+
+let like = 10;
+
+likes = like + 1;
+console.log(likes);
+
+likes++;
+console.log(likes);
+
+likes += 10;
+console.log(likes);
+
+likes -= 15;
+console.log(likes);
+
+//NaN - not a number
+//concatenate numbers
+
+let resultC = "the blog has " + likes + " likes!";
+
+console.log(resultC);
+
+//template strings
+const title = "Best reads of 2019";
+const author = "Mario";
+const likesw = 30;
+
+
+let resultw = `The blog called ${title} by ${author} has ${likesw} likes`;
+console.log(resultw);
