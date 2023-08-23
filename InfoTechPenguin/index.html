@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>InfoTechPenguin</title>
-    <link rel="stylesheet" href="./basic.css">
+    <link id='cssSheet' rel="stylesheet" href="basic.css">
   </head>
 
   <body>
@@ -157,15 +157,29 @@
       </div>
     </div>
 
+    <script>
+
+      function toggleStylesheet(tabId, stylesheet) {
+        const tab = document.getElementById(tabId);
+        tab.addEventListener('click', function () {
+          const styleLink = document.getElementById('cssSheet');
+          styleLink.setAttribute('href', stylesheet);
+        });
+      }
+
+      // Toggle stylesheets for each tab
+      toggleStylesheet('nav-bio-tab', 'basic.css');
+      toggleStylesheet('nav-gramita-tab', 'green.css');
+      toggleStylesheet('nav-infotech-tab', 'basic.css');
+      toggleStylesheet('nav-pinguino-tab', 'pinguino.css');
+      toggleStylesheet('nav-stream-tab', 'basic.css');
+      toggleStylesheet('nav-contact-tab', 'basic.css');
+    // Add more tabs and stylesheets as needed
+    </script>
     <!--Bootstrap Js-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
       crossorigin="anonymous"></script>
-
-    <script>function changeColorHover() {
-        document.getElementsByClassName("nav-link").toggle("bg-dark");
-
-      }</script>
   </body>
 
 </html>

@@ -62,7 +62,7 @@ console.log(fullName.toUpperCase());
 let result = fullName.toLowerCase();
 */
 
-/* Chapter 3 Numbers*/
+/* Chapter 3 Numbers
 
 // math operators +, -, *, /, **, %
 let radius = 10;
@@ -104,3 +104,10 @@ const likesw = 30;
 
 let resultw = `The blog called ${title} by ${author} has ${likesw} likes`;
 console.log(resultw);
+*/
+
+/* Chapter 4 Arays*/
+
+let ninjas = ['shaun', 'ryu', 'chun-lee'];
+
+console.log(ninjas[1])
