@@ -111,3 +111,8 @@ console.log(resultw);
 let ninjas = ['shaun', 'ryu', 'chun-lee'];
 
 console.log(ninjas[1])
+
+//You can have random data inserted into array, even though that's bad practice
+let random = ['shaun', 'ryu', 30, 22]
+
+console.log(random[1] + ' ' + random[3]);
