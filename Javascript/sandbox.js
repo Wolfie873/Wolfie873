@@ -116,3 +116,6 @@ console.log(ninjas[1])
 let random = ['shaun', 'ryu', 30, 22]
 
 console.log(random[1] + ' ' + random[3]);
+
+let hello = document.getElementById('hello').innerHTML('HELLOW WOOEJIOHEHHHSLHHS');
+onload(alert(hello));
