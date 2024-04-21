@@ -20,7 +20,7 @@ var score = 32;
 
 console.log(score);
 
-let fullName = "JorgeOertizDiaz";
+let fullName = "JorgeOrtizDiaz";
 
 console.log(fullName);
 
