@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Call pyscript --->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.4.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.4.1/core.js"></script>
+    
+    <title>Pyscript Test</title>
+</head>
+<body>
+    <body>
+
+        <h1>Database Bookstore</h1>
+        <p>What book are you looking for?</p>
+        <input type="text" name="english" id="english" placeholder="Type book here..." />
+        <button py-click="search_book">Search</button>
+        <div id="output"></div>
+        <script type="py" src="./main.py" config="./pyscript.json"></script>
+      </body>
+      
+</body>
+</html>
