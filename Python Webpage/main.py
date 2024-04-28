@@ -15,12 +15,11 @@ client = MongoClient("mongodb://localhost:27017/")
 db = client.bookstore
 books_collection = db.books
 blue = books_collection.find_one({"title": "Blue"}, {"_id": 0})
-blue_json = json.dumps(blue, indent=4, sort_keys=True)
-
+books = db.books.find({}, {"_id": 0, "title": 1, "author": 1})
 
 class HelloHandler(tornado.web.RequestHandler):
     def get(self):
-        self.write("<div>" + blue_json + "</div>")
+        self.render("database.html", title="Database", books=books, blue=blue)
         
 class PostHandler(tornado.web.RequestHandler):
     def get(self):
