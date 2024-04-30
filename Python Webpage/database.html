@@ -3,16 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            border: 1px solid black;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+        }
+        .main_div{
+            display: inline-block;
+            width: 500px;
+            height: 200px;
+            margin-left: 50px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+        ul{
+            list-style: none;
+        }
+    </style>
     <title>{{ title }}</title>
 </head>
 <body>
-    <div>
+    <div class="main_div">
         <ul>
             {%for book in books%}
-            <li>{{json_encode(book)}}</li>
+            <li>{{book}}</li>
             {%end%}
         </ul>
-        <p>{{json_encode(blue)}}</p>
+        <p>{{blue}}</p>
+        <form action="/" method="post">
+            <label for="book_title">Book Title</label><br>
+            <input type="text" name="book_title" value=""><br>
+            <input type="submit" value="submit" id="look_for_record">
+        </form>
+        <p>{{book_search}}</p><br>
+    </div>
+    <div class="main_div">
+        <form action="/" method="post">
+            <label for="title_name">Book Title</label><br>
+            <input type="text" name="title_name" value=""><br>
+            <label for="author_name">Book Author</label><br>
+            <input type="text" name="author_name" value=""><br>
+            <label for="pages">Book Pages</label><br>
+            <input type="text" name="pages" value=""><br>
+            <label for="rating">Book Rating</label><br>
+            <input type="text" name="rating" value=""><br>
+            <input type="submit" value="submit" id="in_data">
+        </form>
+        <p>{{input_data}}</p>
     </div>
 </body>
 </html>

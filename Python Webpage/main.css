@@ -1,0 +1,13 @@
+body{
+    width: 100%;
+    height: 100%;
+}
+.main_div{
+    display: inline-block;
+    width: 50vw;
+    height: 200px;
+    stroke: 5px solid black;
+}
+ul{
+    list-style: none;
+}
