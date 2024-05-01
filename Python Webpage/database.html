@@ -43,11 +43,17 @@
     <div class="container">
         <div class="row">
             <ul class="list-group col">
-                {%for book in books%}
-                <li class="list-group-item">{{book}}</li>
-                {%end%}
+                {% for book in books %}
+                    <li class="list-group-item">
+                        <ul>
+                            {% for key, value in book.items() %}
+                                <li><strong>{{ key }}:</strong> {{ value }}</li>
+                            {% end %}
+                        </ul>
+                    </li>
+                {% end %}
             </ul>
-            <p class="col">{{blue}}</p>
+            <p class="col">{{blue['title']}}</p>
             <div>
                 <form action="/" method="post" class="form-group">
                     <label for="book_title">Book Title</label><br>
