@@ -15,6 +15,11 @@ db = client.bookstore
 
 
 class HelloHandler(tornado.web.RequestHandler):
+    
+    async def get(self):
+        # Render the template with initial data
+        self.render("database.html", title="Database", input_data={}, books=[], blue=None, book_search=None)
+    
     async def post(self):
         #Set Cookies
         self.set_cookie("title_name", "", expires_days=0)
@@ -69,19 +74,19 @@ class HelloHandler(tornado.web.RequestHandler):
         # Render the template with input data and database contents
         self.render("database.html", title="Database", input_data=input_data, books=books, blue=blue, book_search=book_search)
         
-class PostHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.write("<h1> This is post 1</h1>")
+# class PostHandler(tornado.web.RequestHandler):
+#     def get(self):
+#         self.write("<h1> This is post 1</h1>")
         
-class HomeHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.render("index.html")
+# class HomeHandler(tornado.web.RequestHandler):
+#     def get(self):
+#         self.render("index.html")
         
 def make_app():
     return tornado.web.Application([
         (r"/", HelloHandler),
-        (r"/post", PostHandler),
-        (r"/home", HomeHandler)
+        # (r"/post", PostHandler),
+        # (r"/home", HomeHandler)
         ],
         debug = True,
         autoreload = True)

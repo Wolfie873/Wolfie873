@@ -39,16 +39,20 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col">
-                <ul class="list-group">
-                    {%for book in books%}
-                    <li class="list-group-item">{{book}}</li>
-                    {%end%}
-                </ul>
-            </div>
-            <div class="col">{{blue}}</div>
-            <div class="col">
-                <form action="/" method="post" class="form-group col">
+            <ul class="list-group col">
+                {% for book in books %}
+                    <li class="list-group-item">
+                        <ul>
+                            {% for key, value in book.items() %}
+                                <li><strong>{{ key }}:</strong> {{ value }}</li>
+                            {% end %}
+                        </ul>
+                    </li>
+                {% end %}
+            </ul>
+            <p class="col">{{blue['title']}}</p>
+            <div>
+                <form action="/" method="post" class="form-group">
                     <label for="book_title">Book Title</label><br>
                     <input type="text" name="book_title" value="" class="form-control" id="book_title" aria-describedby="bookTitle"><br>
                     <input type="submit" value="submit" id="look_for_record" class="btn btn-primary">
