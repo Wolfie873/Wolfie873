@@ -17,45 +17,44 @@
     <script src="../Jquery_Practice/jquery-ui-1.13.1/jquery-ui.js"></script>
     <!--UI elements from JQuery-->
 
-    <!-- <style>
-        *{
-            border: 1px solid black;
-        }
-        body{
-            width: 100%;
-            height: 100%;
-        }
-        .main_div{
-            display: inline-block;
-            width: 500px;
-            height: 200px;
-            margin-left: 50px;
-            padding: 10px;
-            border: 1px solid black;
-        }
-        ul{
-            list-style: none;
-        }
-    </style> -->
     <title>{{ title }}</title>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
     <div class="container">
         <div class="row">
-            <ul class="list-group col">
-                {%for book in books%}
-                <li class="list-group-item">{{book}}</li>
-                {%end%}
-            </ul>
-            <p class="col">{{blue}}</p>
-            <div>
-                <form action="/" method="post" class="form-group">
+            <div class="col">
+                <ul class="list-group">
+                    {%for book in books%}
+                    <li class="list-group-item">{{book}}</li>
+                    {%end%}
+                </ul>
+            </div>
+            <div class="col">{{blue}}</div>
+            <div class="col">
+                <form action="/" method="post" class="form-group col">
                     <label for="book_title">Book Title</label><br>
                     <input type="text" name="book_title" value="" class="form-control" id="book_title" aria-describedby="bookTitle"><br>
                     <input type="submit" value="submit" id="look_for_record" class="btn btn-primary">
                 </form>
-                <p>{{book_search}}</p><br>
             </div>
+                <div class="col">{{book_search}}</div><br>
         </div>
         <div class="row">
             <form action="/" method="post" class="form-group">

@@ -58,7 +58,7 @@ class HelloHandler(tornado.web.RequestHandler):
             #Insert data into MongoDB
             db.books.insert_one(input_data)
         else:
-            self.write("<p>Need data, please try again</p>")
+            self.write("")
             
         #Retreiving additional information for rendering the template
         blue = db.books.find_one({"title": "Blue"}, {"_id": 0})
